@@ -3703,10 +3703,16 @@ function postProcess(){
 
 // Clone all requirements in the doc into the Summary of Requirements section.
 function reqSummary () {
+  //
+  // THIS COULD DO WITH A CLEANUP...
+  //
   // Get all the requirements in the specification.
+<<<<<<< Updated upstream
 //
 // THIS COULD DO WITH A CLEANUP...
 //
+=======
+>>>>>>> Stashed changes
   var allReqs = document.querySelectorAll("[id^='req-']:not(.removed)");
   // Loop through each requirement.
   for (i = 0; i < allReqs.length; i++) {
@@ -3878,9 +3884,8 @@ function defTerms () {
 }
 
 var respecConfig = {
-  preProcess: [loadSolidity],
+//  preProcess: [loadSolidity], (doesn't work, and might be redundant)
   format: "markdown",
-// New EEA specStatus
   specStatus: "CG-DRAFT",
   group: "cg/ethtrust",
   pluralize: true,
@@ -3920,13 +3925,6 @@ var respecConfig = {
       href: "https://entethalliance.org/specs/ethtrust-sl/v3/"
     }]
   },
-//    {
-//      key: "Latest release URL ()",
-//      data: [{
-//        value: "https://entethalliance.org/specs/ethtrust-sl/",
-//        href: "https://entethalliance.org/specs/ethtrust-sl/"
-//      }]
-//  },
   {
     key: "Contributors to this version",
     data: [{
@@ -3937,8 +3935,7 @@ var respecConfig = {
       Fly (FlyYouFools), \
       Ian Jacobs (W3C), \
       George Kobakhidze (Diligence), \
-      Dominik Muhs",
-    href: "dummycontrib"
+      Dominik Muhs"
     }]
   }],
   localBiblio: {
