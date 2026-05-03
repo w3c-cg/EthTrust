@@ -3493,94 +3493,71 @@ This section provides a summary of all requirements in this Specification.
 
 <h3>Acknowledgments</h3>
 
-The EEA acknowledges and thanks the many people who contributed to the
+The Community Group acknowledges and thanks the many people who contributed to the
 development of this version of the specification. Please advise us of any errors
 or omissions.
 
-We are grateful to the entire community who develops Ethereum, for their work and their ongoing collaboration.
+Gratitude is due to the entire community who develops Ethereum, for their work and their ongoing collaboration.
 
-In particular we would like to thank the contributors to the
-[previous version of this specification](https://entethalliance.org/specs/ethtrust-sl/v1/),
-Co-chairs Christopher Cordi and Opal Graham as well as previous co-chairs David Tarditi and Jaye Herrell
+As always, we have built on the shoulders of giants. Among them gratitude is due to the contributors to the
+previous versions of this specification ([version 1](https://entethalliance.org/specs/ethtrust-sl/v1/),
+[version 2](https://entethalliance.org/specs/ethtrust-sl/v2/), and [version 3](https://entethalliance.org/specs/ethtrust-sl/v3/)),
+the co-chairs of the EEA Working group Christopher Cordi, Opal Graham, David Tarditi, and Jaye Herrell,
+Joseph Lubin of Consensys whose generous financial support enabled the first three versions to be produced,
+Tom Lindeman, and Daniel Burnett who made the development of the specification possible,
+Pierre-Alain Muoy, Jonathan Prince and Corey Dickson of NVISO who along with Tom set up the initial project,
 the maintainers of the Solidity Compiler and those who write Solidity Security Alerts [[solidity-alerts]],
 the community who developed and maintained the Smart Contract Weakness Classification [[swcregistry]],
-the Machine Consultancy for publishing the TMIO Best Practices [[tmio-bp]],
+Antoine Toulmé and the Machine Consultancy for publishing the TMIO Best Practices [[tmio-bp]],
+Consensys Diligence whose work on the SWC Registry was a crucial foundational effort this project built on,
 and judges and participants in the [Underhanded Solidity](https://underhanded.soliditylang.org/)
 competitions that have taken place. They have all been very important sources of information
 and inspiration to the broader community as well as to us in developing this specification.
 
 Security principles have also been developed over many years by many individuals,
-far too numerous to individually thank for contributions that have helped us
-to write the present specification. We are grateful to the many people on whose work we build.
+far too numerous to individually thank for contributions that have helped
+to write the present specification.
+
+Thanks are due to very many people on whose work we build.
 </section>
 
 <section id="sec-changes">
 
 <h3>Changes</h3>
 
-Full details of all changes since the version 2 release of this Specification
-are available to EEA members via the
-[GitHub repository for this Specification](https://github.com/entethalliance/eta-registry).
-
 This section outlines substantive changes made to the specification since
-version 2:
-
-A new informative section was added, <a href="#sec-testing-methods"></a>.
+the EEA publication (version 3):
 
 <section id="sec-change-new">
 <h4>New Requirements and Recommended Good Practices</h4>
 
-- Add level <b>[Q]</b>Requirement <a href="#req-3-document-threats"><b>[Q] Document Threat Models</b></a>,
-- Move the Recommended Good Practice to <span class="removed" id="req-R-timelock-for-privileged-actions">Use Timelock Delays</span> to a level <b>[Q]</b> Requirement:
-  <a href="#req-3-timelock-for-privileged-actions"><b>[Q] Use TimeLock Delays for Sensitive Operations</b></a>,
-- Added Recommended Good Practice <a href="#req-R-mutation-testing"><b>[GP] Use Mutation Testing</b></a>
-- <a href="#req-3-consistent-solidity-output"><b>[Q] Specify Solidity Compiler Versions to Produce Consistent Output</b></a>
+None so far.
+
 </section>
 
 <section id="sec-change-update">
 <h4>Updated Requirements</h4>
 
-The following requirements have been changed in some way since the previous release:
+The following requirements have been changed in some way since the version 3 release:
 
-<ul>
-<li>The requirements for a <a>Valid Conformance Claim</a> were slightly simplified, and clarified, to allow for making them easier to manage.</li>
-  <li> Update
-  <ul>
-    <li><a href="#req-1-delegatecall"><b>[S] No <code>delegatecall()</code></b></a>,</li>
-    <li><a href="#req-1-compiler-SOL-2022-5-push"><b>[S] Compiler Bug SOL-2022-5 with <code>.push()</code></b></a>,</li>
-    <li><a href="#req-2-malleable-signatures-for-replay"><b>[M] No Improper Usage of Signatures for Replay Attack Protection</b></a>,</li>
-    <li><a href="#req-2-compiler-SOL-2022-5-assembly"><b>[M] Compiler Bug SOL-2022-5 in `assembly {}`</b></a>, and</li>
-    <li><a href="#req-2-compiler-SOL-2022-4"><b>[M] Compiler Bug SOL-2022-4</b></a></li>
-  </ul></li>
-  to fix grammatical errors and provide clearer formatting
-<li> Update <a href="#req-1-compiler-SOL-2022-3"><b>[S] Compiler Bug SOL-2022-3</b></a> and
-  <a href="req-1-sol-2022-2"><b>[S] Compiler Bug SOL-2022-2</b></a>
-  to be clear that it is not necessary to test these when using Solidity Compiler version 0.8.13,</li>
-<li>Update <a href="#req-1-compiler-SOL-2020-4"><b>[S] Compiler Bug SOL-2020-4</b></a> to be clear that it applies to
-  Solidity Compiler versions older than 0.6.6</li>
-<li>Update <a href="#req-2-compiler-SOL-2022-7"><b>[M] Compiler Bug SOL-2022-7</b></a> to be clear that it is not necessary
-  to test this when using Solidity Compiler version 0.8.17</li>
-<li>Rename and Update <a href="#req-3-block-front-running"><b>[Q] Protect against Front-Running</b></a> to
-  <a href="#req-3-block-front-running"><b>[Q] Protect against Ordering Attacks</b></a> to cover a broader class of attacks.</li>
-<li>Update <a href="#req-3-linted"><b>[Q] Code Linting</b></a>
-  <ul>
-  <li>to contain the requirements formerly in<ul>
-    <li><a href="#req-2-no-failing-asserts"><b>[M] No Failing `assert()` Statements</b></a>, and</li>
-    <li><a href="#req-1-inheritance-conflict"><b>[S] No Conflicting Names</b></a></li>
-  </ul></li>
-  <li>and to include a requirement for a `pragma` directive that specifies a range of Solidity Compiler Versions
-  </li>
-<li>Update <a href="req-3-protect-governance"><b>[Q] Protect Against Governance Takeovers</b></a>
-  and its explanation to clarify the intent of protecting against malicious actors.</li>
-<li>Update <a href="#req-3-document-system"><b>[Q] Document System Architecture</b></a> to explicitly mention
-    variable and data structure sizes, and the related requirement <a href="#req-3-enough-gas"><b>[Q] Manage Gas Usage</b></a></li>
-<li>Rename <b>[M] No Overflow/Underflow</b> to <a href="#req-2-overflow-underflow"><b>[M] Safe Overflow/Underflow</b></a></li>
-</ul>
+None so far
 
 </section>
 
 <section id="sec-change-removed">
 <h4>Requirements removed</h4>
+
+None so far.
+
+</section>
+
+</section>
+<section id=""sec-change-previously-deleted>
+
+<h4>Requirements removed from previous versions</h4>
+
+The following requirements, present in Version 2 of the specification,
+were <a href="https://entethalliance.org/specs/ethtrust-sl/v3/#sec-change-removed">removed in Version 3</a>:
 
 <ul>
   <li>The requirements
@@ -3609,14 +3586,8 @@ The following requirements have been changed in some way since the previous rele
   was removed, with the functional requirement being covered via references to Version 2 of the Specification, in
   <a href="#req-2-compiler-060"><b>[M] Use a Modern Compiler</b></a>.</li>
 </ul>
-</section>
 
-</section>
-<section id=""sec-change-previously-deleted>
-
-<h4>Requirements removed from previous versions</h4>
-
-The following requirements, present in Version 1 of this specification,
+The following requirements, present in Version 1 of the specification,
 were <a href="https://entethalliance.org/specs/ethtrust-sl/v2/#requirements-removed">removed in Version 2</a>:
 
 <ul>
@@ -3697,7 +3668,7 @@ were <a href="https://entethalliance.org/specs/ethtrust-sl/v2/#requirements-remo
 function loadSolidity() {    //this is the function you call in 'preProcess'
 
 //
-// BUT IT BREAKS :( so it is disabled for now. TODO: Fix this...
+// BUT IT BREAKS :( so it is disabled for now. TODO: Do we need to fix this, or did ReSpec development solve it?
 //
 /*
   const worker = await new Promise(resolve => {
@@ -3726,18 +3697,15 @@ function postProcess(){
 	reqSummary();
 	defTerms();
 
-  // Remove standard statement about normative and informative - @@
+  // Remove ReSpec boilerplate statement about normative and informative sections
   document.querySelector('#conformance > p').remove()
 }
 
-// Clones all requirements in the doc into the Summary of Requirements section.
-
-
-
+// Clone all requirements in the doc into the Summary of Requirements section.
 function reqSummary () {
   // Get all the requirements in the specification.
 //
-// THIS COULD DO WITH A CLEANUP
+// THIS COULD DO WITH A CLEANUP...
 //
   var allReqs = document.querySelectorAll("[id^='req-']:not(.removed)");
   // Loop through each requirement.
