@@ -2569,6 +2569,18 @@ Some solidity compiler bugs described in <a href="#sec-1-compiler-bugs"></a> hav
 <a href="#req-R-use-latest-compiler"><b>[GP] Use Latest Compiler</b></a> means that <a>Tested Code</a>
 passes all requirements in this subsection.</p>
 
+<p id="req-2-compiler-SOL-2025-1">
+<b>[M] Compiler Bug SOL-2025-1</b><br>
+<a>Tested code</a> that can determine that a particular array item crosses the storage boundary space (2**256), and clears that array entry
+MUST NOT use a Solidity compiler version earlier than 0.8.32.
+</p>
+
+Until 0.8.32 the compiler did not correctly account for the possibility that storage space would loop around the 2**256 boundary,
+meaning that some operaiotns would not correctly copy or clear data.
+
+See also the [18 December 2025 security alert](https://www.soliditylang.org/blog/2025/12/18/lost-storage-array-write-on-slot-overflow-bug/),
+which includes examples of how the bug is triggered, and remediation advice.
+
 <p id="req-2-compiler-SOL-2023-1">
   <b>[M] Solidity Compiler Bug 2023-1</b><br>
   <a>Tested code</a> that contains a compound expression with side effects that uses `.selector`
@@ -3531,7 +3543,8 @@ the EEA publication (version 3):
 <section id="sec-change-new">
 <h4>New Requirements and Recommended Good Practices</h4>
 
-None so far.
+- <a href="#req-2-compiler-SOL-2025-1"><b>[M] Compiler Bug SOL-2025-1</b></a>
+
 
 </section>
 
@@ -3705,7 +3718,7 @@ function postProcess(){
 function reqSummary () {
   //
   // THIS COULD DO WITH A CLEANUP...
-  // 
+  //
   // Get all the requirements in the specification.
   var allReqs = document.querySelectorAll("[id^='req-']:not(.removed)");
   // Loop through each requirement.
