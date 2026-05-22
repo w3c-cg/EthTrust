@@ -162,12 +162,12 @@ h6 > a.self-link::before {
 
 <body class="h-entry">
 <div class="head">
-      <!--a class="logo" href=""><img id="eea-logo" alt="EEA" width="240" height="240" src="https://entethalliance.org/wp-content/uploads/2025/04/EnterpriseEthereumAlliance_PNG_Thumbnail.png"></a-->
+      <!--a class="logo" href=""><img id="logo" alt="EthTrust" width="240" height="240" src="@@"></a-->
     <h1 id="title" class="title p-name">Checklist for EthTrust version-after-3 Editor's draft</h1>
 
       <h2>
         Editor's Draft
-        <time class="dt-published" datetime="2025-03-07">13 May 2026</time>
+        <time class="dt-published" datetime="2026-05-22">22 May 2026</time>
       </h2>
       <dl>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3c-cg.github.io/ethtrust/checklist.html">https://w3c-cg.github.io/ethtrust/checklist.html</a></dd>
@@ -175,35 +175,32 @@ h6 > a.self-link::before {
 
 
 
-      <p class="copyright">Copyright © 2023 - 2025
-      <a href="https://entethalliance.org/">Enterprise Ethereum Alliance</a>. </p>
+      <p class="copyright">Copyright © 2026 the contributors to the <a href="https://www.w3.org/groups/cg/ethtrust">EthTrust Community Group</a>. This document is licensed under the terms of the <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a> of the license terms is available.</p>
       <hr title="Separator for header">
     </div>
 
 <section id="sotd" class="introductory"><h2>Status of This Document</h2>
 <p><em>This section describes the status of this document at the time of its publication. Newer documents may supersede this document.</em></p>
-<p>This document is licensed by the Enterprise Ethereum Alliance, Inc.
-(<abbr>EEA</abbr>) under the terms of the
-<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a> [<cite><a class="bibref" href="#bib-license" title="Apache license version 2.0" data-link-type="biblio">License</a></cite>].
-Unless otherwise explicitly authorised in writing by the EEA,
-you can only use this document in accordance with those terms.</p>
+
+<p>Please note this Editor's Draft is "Work in Progress".</p>
+
+
 <p>Unless required by applicable law or agreed to in writing, this document
 is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
 either express or implied.</p>
 <p>This checklist is a companion document for the
-<a href="https://entethalliance.github.io/eta-registry/ethtrust-spec.html">editors' draft of the EthTrust Specification, version-after-3</a>,
+<a href="https://w3c-cg.github.io/EthTrust/ethtrust-spec.html">editors' draft of the EthTrust Specification, version-after-3</a>,
 provided as a convenience.
-In case of any discrepancy between this document and the <a href="https://entethalliance.github.io/eta-registry/ethtrust-spec.html">Specification Draft</a>,
-    the text in the <a href="https://entethalliance.github.io/eta-registry/ethtrust-spec.html">Specification Draft</a> is the authorative version.
-The content of this document has been reviewed by the W3C EthTrust Community Group.
-It is inappropriate to cite this Editor's Draft other than as "Work in Progress".</p>
+In case of any discrepancy between this document and the <a href="https://w3c-cg.github.io/EthTrust/ethtrust-spec.html">Specification Draft</a>,
+the text in the <a href="https://w3c-cg.github.io/EthTrust/ethtrust-spec.html">Specification Draft</a> is the authorative version.</p>
 
-<p>The Working Group <em>expects</em> at time of writing to publish a release version of this checklist alongside the next version
-of the Specification, in Q1 2025.</p>
 
-<p>Please send any comments to the W3C EthTrust Community Group</a>, or as issues or comments on them, in the
-<a href="https://github.com/w3c-cg/EthTrust/issues">Group's public GitHub repository</a></p>.
+<p>Please send any comments to the  <a href="https://www.w3.org/groups/cg/ethtrust">EthTrust Community Group</a>, or as issues or comments on them, in the
+<a href="https://github.com/w3c-cg/EthTrust/issues">Ethtrust Community Group's public GitHub repository</a>.</p>.
 
+<p>This document is based on a <a href="https://github.com/w3c-cg/EthTrust/blob/main/source-checklist.html">source document</a> published by the Enterprise Ethereum Alliance, Inc.
+and licensed under the terms of the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>
+[<cite><a class="bibref" href="#bib-license" title="Apache license version 2.0" data-link-type="biblio">License</a></cite>].</p>
     </section>
 
     <nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc">
@@ -261,7 +258,7 @@ the requirement or good practice name. They are rendered as links in bold type, 
 
 <h3 id="x2-1-conformance-claims"><bdi class="secno">2.1 </bdi>Conformance Claims<a class="self-link" aria-label="§" href="#sec-conformance-claims"></a></h3>
 <p>To grant <a href="ethtrust-spec.html#dfn-tested-code" class="externalDFN" data-link-type="dfn">Tested Code</a>
-<dfn data-dfn-type="dfn" id="dfn-eea-ethtrust-certified">EEA EthTrust Certification</dfn>,
+<dfn data-dfn-type="dfn" id="dfn-ethtrust-certified">EthTrust Certification</dfn>,
 an auditor provides a <a href="#dfn-valid-conformance-claim" class="internalDFN" data-link-type="dfn">Valid Conformance Claim</a>, that the <a href="#dfn-tested-code" class="internalDFN" data-link-type="dfn">Tested Code</a>
   meets the requirements of the <a href="ethtrust-spec.html#dfn-security-levels" class="internalDFN" data-link-type="dfn">Security Level</a> for which it is certified.</p>
 
@@ -270,15 +267,15 @@ an auditor provides a <a href="#dfn-valid-conformance-claim" class="internalDFN"
 <li>The <a href="ethtrust-spec.html#dfn-evm-version" class="externalDFN" data-link-type="dfn">EVM version(s)</a> (of those listed at [<cite><a class="bibref" href="#bib-evm-version" title="Using the Compiler - Solidity Documentation. (§Targets)" data-link-type="biblio">EVM-version</a></cite>]) for which the certification is valid.</li>
 <li>The version of the EthTrust specification for which the contract is certified.</li>
 <li>A name and a URL for the organisation or software issuing the certification.</li>
-<li>The <a href="ethtrust-spec.html#dfn-security-levels" class="externalDFN" data-link-type="dfn">Security Level</a> ("<b>[S]</b>", "<b>[M]</b>", or "<b>[Q]</b>") that the <a href="#dfn-eea-ethtrust-certified" class="internalDFN" data-link-type="dfn">EEA EthTrust Certification</a>
+<li>The <a href="ethtrust-spec.html#dfn-security-levels" class="externalDFN" data-link-type="dfn">Security Level</a> ("<b>[S]</b>", "<b>[M]</b>", or "<b>[Q]</b>") that the <a href="#dfn-ethtrust-certified" class="internalDFN" data-link-type="dfn">EthTrust Certification</a>
 claims.</li>
 <li>A list of the requirements which were tested and a statement for each one,
 noting whether the <a href="ethtrust-spec.html#dfn-tested-code" class="externalDFN" data-link-type="dfn">Tested Code</a> meets the requirement.
 This <em class="rfc2119" title="MAY">MAY</em> include further information.</li>
-<li>An explicit notice stating that <a href="#dfn-eea-ethtrust-certified" class="internalDFN" data-link-type="dfn">EEA EthTrust Certification</a> does not provide any warranty or formal guarantee<ul>
+<li>An explicit notice stating that <a href="#dfn-ethtrust-certified" class="internalDFN" data-link-type="dfn">EthTrust Certification</a> does not provide any warranty or formal guarantee<ul>
 <li>of the overall security of the <a href="ethtrust-spec.html#dfn-tested-code" class="externalDFN" data-link-type="dfn">Tested Code</a>, nor</li>
 <li>that the project is free from bugs or vulnerabilities.
-This notice <em class="rfc2119" title="SHOULD">SHOULD</em> state that <a href="#dfn-eea-ethtrust-certified" class="internalDFN" data-link-type="dfn">EEA EthTrust Certification</a> represents the best efforts of the issuer
+This notice <em class="rfc2119" title="SHOULD">SHOULD</em> state that <a href="#dfn-ethtrust-certified" class="internalDFN" data-link-type="dfn">EthTrust Certification</a> represents the best efforts of the issuer
 to detect and identify certain known vulnerabilities that can affect Smart Contracts.</li>
 </ul>
 </li>
@@ -473,7 +470,7 @@ or its now-deprecated alias <code>suicide()</code>
 <li>if using Solidity compiler version 0.5.5 or 0.5.6,
   <a href="https://entethalliance.org/specs/ethtrust-sl/v1#req-2-compiler-SOL-2019-2-assembly"><b>[M]
   Compiler Bug SOL-2019-2 in `assembly {}`</b></a> in
-  <a href="https://entethalliance.org/specs/ethtrust-sl/v1/">EEA EthTrust Security Levels Specification Version 1</a>.</li>
+  [<cite><a class="bibref" href="#bib-ethtrust-sl-v1" title="EEA EthTrust Security Levels Specification Version 1" data-link-type="biblio">EthTrust-v1</a></cite>].</li>
 </ul>
 </div>
 
@@ -842,8 +839,8 @@ signature from the base contract</li>
 <div id="summ-req-1-compiler-060"><a href="ethtrust-spec.html#req-1-compiler-060"><b>[S] Use a Modern Compiler</a><a href="#req-1-compiler-060" class="selflink"></a></b><br>
   <p><b>[S] Use a Modern Compiler</b><br>
     <a href="ethtrust-spec.html#dfn-tested-code" class="internalDFN" data-link-type="dfn">Tested code</a> <em class="rfc2119" title="MUST NOT">MUST NOT</em> use a Solidity compiler version older than 0.8.0,
-    <b>unless</b> it meets all the following requirements from the
-    <a href="https://entethalliance.org/specs/ethtrust-sl/v2/">EEA EthTrust Security Levels Specification Version 2</a>,
+    <b>unless</b> it meets all the following requirements from
+    [<cite><a class="bibref" href="#bib-ethtrust-sl-v2" title="EEA EthTrust Security Levels Specification Version 2" data-link-type="biblio">EthTrust-v2</a></cite>],
     as <a href="ethtrust-spec.html#dfn-overriding-requirement" class="internalDFN" data-link-type="dfn">Overriding Requirements</a>:</p>
   <ul>
     <li><a href="https://entethalliance.org/specs/ethtrust-sl/v2/#req-1-overflow-underflow"><b>[S] No Overflow/Underflow</b></a></li>
@@ -858,8 +855,8 @@ signature from the base contract</li>
   </ul>
   <p><b>AND</b></p>
   <p><a href="ethtrust-spec.html#dfn-tested-code" class="internalDFN" data-link-type="dfn">Tested code</a> <em class="rfc2119" title="MUST NOT">MUST NOT</em> use a Solidity compiler version older than 0.6.0,
-<b>unless</b> it meets all the following requirements from the
-<a href="https://entethalliance.org/specs/ethtrust-sl/v1/">EEA EthTrust Security Levels Specification Version 1</a>,
+<b>unless</b> it meets all the following requirements from
+[<cite><a class="bibref" href="#bib-ethtrust-sl-v1" title="EEA EthTrust Security Levels Specification Version 1" data-link-type="biblio">EthTrust-v1</a></cite>],
 as <a href="ethtrust-spec.html#dfn-overriding-requirement" class="internalDFN" data-link-type="dfn">Overriding Requirements</a>:</p>
 <ul>
 <li><a href="https://entethalliance.org/specs/ethtrust-sl/v1/#req-1-compiler-SOL-2020-11-length"><b>[S]
@@ -960,7 +957,7 @@ Compiler Bug SOL-2019-5</b></a></li>
   <td>
 <p id="summ-req-2-pass-l1">
 <a href="ethtrust-spec.html#req-2-pass-l1"><b>[M] Pass Security Level [S]</a><a href="#summ-req-2-pass-l1" class="selflink"></a></b><br>
-  To be eligible for <a href="#dfn-eea-ethtrust-certification" class="internalDFN" data-link-type="dfn">EEA EthTrust certification</a> at <a href="ethtrust-spec.html#dfn-security-level-m" class="internalDFN" data-link-type="dfn">Security Level [M]</a>,
+  To be eligible for <a href="#dfn-ethtrust-certification" class="internalDFN" data-link-type="dfn">EthTrust certification</a> at <a href="ethtrust-spec.html#dfn-security-level-m" class="internalDFN" data-link-type="dfn">Security Level [M]</a>,
   <a href="ethtrust-spec.html#dfn-tested-code" class="internalDFN" data-link-type="dfn">Tested code</a> <em class="rfc2119" title="MUST">MUST</em> meet the requirements for <a href="ethtrust-spec.html#dfn-security-level-s" class="internalDFN" data-link-type="dfn">Security Level [S]</a>.
 </p>
 
@@ -1593,12 +1590,12 @@ between 0.6.5 and 0.8.8 (inclusive).
   <a href="ethtrust-spec.html#dfn-tested-code" class="internalDFN" data-link-type="dfn">Tested code</a> <em class="rfc2119" title="MUST NOT">MUST NOT</em> use a Solidity compiler version older than 0.8.0,
   <b>unless</b> it meets the requirement
   <a href="https://entethalliance.org/specs/ethtrust-sl/v2/#req-2-compiler-check-payable-constructor"><b>[M] Compiler Bug Check Constructor Payment</b></a>
-  from the <a href="https://entethalliance.org/specs/ethtrust-sl/v2/">EEA EthTrust Security Levels Specification Version 2</a>,
+  from [<cite><a class="bibref" href="#bib-ethtrust-sl-v2" title="EEA EthTrust Security Levels Specification Version 2" data-link-type="biblio">EthTrust-v2</a></cite>],
     as an <a href="ethtrust-spec.html#dfn-overriding-requirement" class="internalDFN" data-link-type="dfn">Overriding Requirement</a>,</p>
     <p><b>AND</b></p>
   <p><a href="ethtrust-spec.html#dfn-tested-code" class="internalDFN" data-link-type="dfn">Tested code</a> <em class="rfc2119" title="MUST NOT">MUST NOT</em> use a Solidity compiler version older than 0.6.0,
-<b>unless</b> it meets all the following requirements from the
-<a href="https://entethalliance.org/specs/ethtrust-sl/v1/">EEA EthTrust Security Levels Specification Version 1</a>,
+<b>unless</b> it meets all the following requirements from
+[<cite><a class="bibref" href="#bib-ethtrust-sl-v1" title="EEA EthTrust Security Levels Specification Version 1" data-link-type="biblio">EthTrust-v1</a></cite>],
 as <a href="ethtrust-spec.html#dfn-overriding-requirement" class="internalDFN" data-link-type="dfn">Overriding Requirements</a>:</p>
 <ul>
 <li><a href="https://entethalliance.org/specs/ethtrust-sl/v1/#req-2-compiler-SOL-2020-2"><b>[M] Compiler Bug SOL-2020-2</b></a></li>
@@ -1630,7 +1627,7 @@ as <a href="ethtrust-spec.html#dfn-overriding-requirement" class="internalDFN" d
   <td>
 <p id="summ-req-3-pass-l2">
 <a href="ethtrust-spec.html#req-3-pass-l2"><b>[Q] Pass Security Level [M]</a><a href="#req-3-pass-l2" class="selflink"></a></b><br>
-  To be eligible for <a href="#dfn-eea-ethtrust-certification" class="internalDFN" data-link-type="dfn">EEA EthTrust certification</a> at <a href="ethtrust-spec.html#dfn-security-level-q" class="internalDFN" data-link-type="dfn">Security Level [Q]</a>,
+  To be eligible for <a href="#dfn-ethtrust-certification" class="internalDFN" data-link-type="dfn">EthTrust certification</a> at <a href="ethtrust-spec.html#dfn-security-level-q" class="internalDFN" data-link-type="dfn">Security Level [Q]</a>,
   <a href="ethtrust-spec.html#dfn-tested-code" class="internalDFN" data-link-type="dfn">Tested code</a> <em class="rfc2119" title="MUST">MUST</em> meet the requirements for <a href="ethtrust-spec.html#dfn-security-level-m" class="internalDFN" data-link-type="dfn">Security Level [M]</a>.
 </p>
 
@@ -2395,7 +2392,7 @@ The <a href="ethtrust-spec.html#dfn-tested-code" class="internalDFN" data-link-t
 <p>Definitions of the following terms, copied from the <a href="ethtrust-spec.html">EthTrust Specification</a>, are given in this document:</p>
 
 <div class="inside"><ul class="respec-dfn-list">
-<li id="item-5"><a id="dfnanchor-5" href="#dfn-eea-ethtrust-certification">EEA Ethtrust Certification</a></li>
+<li id="item-5"><a id="dfnanchor-5" href="#dfn-ethtrust-certification">Ethtrust Certification</a></li>
 <li id="item-47"><a id="dfnanchor-47" href="#dfn-valid-conformance-claim">Valid Conformance Claim</a></li>
 </ul></div>
 
@@ -2443,7 +2440,9 @@ The following terms used in this checklist are defined in the <a href="ethtrust-
 <dt id="bib-cwe">[CWE]</dt><dd><a href="https://cwe.mitre.org/index.html"><cite>Common Weakness Enumeration</cite></a>.  MITRE. URL: <a href="https://cwe.mitre.org/index.html">https://cwe.mitre.org/index.html</a></dd>
 <dt id="bib-eip-155">[EIP-155]</dt><dd><a href="https://eips.ethlibrary.io/eip-155.html"><cite>Simple Replay Attack Protection</cite></a>.  Ethereum Foundation. URL: <a href="https://eips.ethlibrary.io/eip-155.html">https://eips.ethlibrary.io/eip-155.html</a></dd>
 <dt id="bib-erc">[ERC]</dt><dd><a href="https://eips.ethereum.org/erc"><cite>ERC Final - Ethereum Improvement Proposals</cite></a>.  Ethereum Foundation. URL: <a href="https://eips.ethereum.org/erc">https://eips.ethereum.org/erc</a></dd>
-<dt id="bib-ethtrust-sl-v2">[EthTrust-sl-v2]</dt><dd><a href="https://entethalliance.org/specs/ethtrust-sl/v1/"><cite>EEA EthTrust Security Levels Specification. Version 2</cite></a>.  Enterprise Ethereum Alliance. URL: <a href="https://entethalliance.org/specs/ethtrust-sl/v1/">https://entethalliance.org/specs/ethtrust-sl/v1/</a></dd>
+<dt id="bib-ethtrust-sl-v2">[EthTrust-v3]</dt><dd><a href="https://entethalliance.org/specs/ethtrust-sl/v3/"><cite>EEA EthTrust Security Levels Specification. Version 3</cite></a>.  Enterprise Ethereum Alliance, May 2025. URL: <a href="https://entethalliance.org/specs/ethtrust-sl/v3/">https://entethalliance.org/specs/ethtrust-sl/v3/</a></dd>
+<dt id="bib-ethtrust-sl-v2">[EthTrust-v2]</dt><dd><a href="https://entethalliance.org/specs/ethtrust-sl/v2/"><cite>EEA EthTrust Security Levels Specification. Version 2</cite></a>.  Enterprise Ethereum Alliance, December 2023. URL: <a href="https://entethalliance.org/specs/ethtrust-sl/v2/">https://entethalliance.org/specs/ethtrust-sl/v2/</a></dd>
+<dt id="bib-ethtrust-sl-v1">[EthTrust-v1]</dt><dd><a href="https://entethalliance.org/specs/ethtrust-sl/v1/"><cite>EEA EthTrust Security Levels Specification. Version 1</cite></a>.  Enterprise Ethereum Alliance, August 2022. URL: <a href="https://entethalliance.org/specs/ethtrust-sl/v1/">https://entethalliance.org/specs/ethtrust-sl/v1/</a></dd>
 <dt id="bib-evm-version">[EVM-version]</dt><dd><a href="https://docs.soliditylang.org/en/latest/using-the-compiler.html#target-options"><cite>Using the Compiler - Solidity Documentation. (§Targets)</cite></a>.  Ethereum Foundation. URL: <a href="https://docs.soliditylang.org/en/latest/using-the-compiler.html#target-options">https://docs.soliditylang.org/en/latest/using-the-compiler.html#target-options</a></dd>
 <dt id="bib-natspec">[NatSpec]</dt><dd><a href="https://docs.soliditylang.org/en/latest/natspec-format.html"><cite>NatSpec Format - Solidity Documentation.</cite></a>.  Ethereum Foundation. URL: <a href="https://docs.soliditylang.org/en/latest/natspec-format.html">https://docs.soliditylang.org/en/latest/natspec-format.html</a></dd>
 <dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://www.rfc-editor.org/rfc/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a></dd>
