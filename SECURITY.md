@@ -9,7 +9,7 @@ currently being supported with security updates.
 | ------- | ------------------ |
 | Editor's draft post version 3  | :white_check_mark: |
 
-Please note that the COmmunity Group does not have the ability to make changes to content published by EEA. If appropriate, we will advise EEA of security reports. 
+Please note that the Community Group does not have the ability to make changes to content published by EEA. If appropriate, we will advise EEA of security reports. 
 
 ## Reporting a Vulnerability
 
