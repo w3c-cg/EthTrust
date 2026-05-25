@@ -134,15 +134,15 @@ In case of any discrepancy, the normative text is in this specification document
 <section id="sec-typographic-conventions">
   <h4>Typographic Conventions</h4>
 
-  The structure and formatting of requirements is described in detail in
+The structure and formatting of requirements is described in detail in
   <a href="#sec-reading-requirements"></a>.
 
-  Examples are given in some places. These are not requirements and are not normative.
-  They are distinguished by a background with a border and generally a title, like so:
+Examples are given in some places. These are not requirements and are not normative.
+They are distinguished by a background with a border and generally a title, like so:
 
   <aside class="example" title="Example: An example example">
-  There can be text with <code>code()</code> inline in an example, as well as
-  blocks of code:
+There can be text with <code>code()</code> inline in an example, as well as
+blocks of code:
 
 <pre><code class="solidity">
 // SPDX-License-Identifier: MIT
@@ -154,24 +154,24 @@ contract HelloWorld{
 </code></pre>
 </aside>
 
-  Some examples are given of vulnerable code, or what NOT to do.
-  It is a very bad idea to copy such examples into production code.
-  These are marked as warnings:
+Some examples are given of vulnerable code, or what NOT to do.
+It is a very bad idea to copy such examples into production code.
+These are marked as warnings:
 
   <aside class="example warning" title="Example problem: Don't copy this">
-  Deploying code that has not been reviewed for security is a bad idea.
+Deploying code that has not been reviewed for security is a bad idea.
   </aside>
 
-  Definitions of terms are formatted <dfn>Like This</dfn>
-  and subsequent references to defined terms are rendered as links to that definition
+Definitions of terms are formatted <dfn>Like This</dfn>
+and subsequent references to defined terms are rendered as links to that definition
   <a>Like This</a>.
 
-  References to other documents are given as links to the relevant entry
-  in the section <a href="#references"></a>, within square brackets: [[CWE]].
+References to other documents are given as links to the relevant entry
+in the section <a href="#references"></a>, within square brackets: [[CWE]].
 
-  Links to requirements begin with a <a>Security Level</a>: **[S]**, **[M]**
-  or **[Q]**, and links to recommended good practices begin with **[GP]**. They then include
-  the requirement or good practice name. They are rendered as links in bold type:
+Links to requirements begin with a <a>Security Level</a>: **[S]**, **[M]**
+or **[Q]**, and links to recommended good practices begin with **[GP]**. They then include
+the requirement or good practice name. They are rendered as links in bold type:
 
 <aside class="example">
 
@@ -184,7 +184,7 @@ Variables, introduced to be described further on in a statement or requirement, 
 Occasional explanatory notes, presented as follows, are not normative and do not specify formal requirements.
 
 <aside class="note" title="Notes are explanatory">
-  The content of a Note is meant to be useful, but does not form a requirement.
+The content of a Note is meant to be useful, but does not form a requirement.
 </aside>
 
 </section>
@@ -192,10 +192,10 @@ Occasional explanatory notes, presented as follows, are not normative and do not
   <section id="sec-reading-requirements">
     <h4>How to Read a Requirement</h4>
 
-  The core of this document is the requirements, that collectively define
+The core of this document is the requirements, that collectively define
   <a>EthTrust Certification</a>.
 
-  Requirements have
+Requirements have
 
   - a [Security Level](#sec-levels) that is one of "[**[S]**](#sec-levels-one)",
     "[**[M]**](#sec-levels-two)", or "[**[Q]**](#sec-levels-three)",
@@ -203,22 +203,22 @@ Occasional explanatory notes, presented as follows, are not normative and do not
   - a link (identified with "🔗") to its URL, and
   - a statement of what MUST be achieved to meet the requirement.
 
-  The group intends that the URL for a requirement in this Editors' Draft always points to
-  the latest version of the requirement in the group's Editors' Draft.
-  Note that this possibly represents incomplete work in progress.
+The group intends that the URL for a requirement in this Editors' Draft always points to
+the latest version of the requirement in the group's Editors' Draft.
+Note that this possibly represents incomplete work in progress.
 
-  Some requirements at the same <a>Security Level</a> are grouped in a subsection,
-  because they are related to a particular theme or area of potential attacks.
+Some requirements at the same <a>Security Level</a> are grouped in a subsection,
+because they are related to a particular theme or area of potential attacks.
 
-  Requirements are followed by explanation, that can include why the requirement
-  is important, how to test for it, links to <a>Overriding Requirement</a> and
-  <a>Related Requirements</a>, test cases, and links to other useful information.
+Requirements are followed by explanation, that can include why the requirement
+is important, how to test for it, links to <a>Overriding Requirement</a> and
+<a>Related Requirements</a>, test cases, and links to other useful information.
 
-  As well as requirements, this document includes some
+As well as requirements, this document includes some
   <a href="#sec-good-practice-recommendations"></a>, that are formatted similarly
-  with an apparent Security Level of "**[GP]**".
-  It is not necessary to implement these in order to conform to the specification,
-  but if carefully implemented they can improve the security of smart contracts.
+with an apparent Security Level of "**[GP]**".
+It is not necessary to implement these in order to conform to the specification,
+but if carefully implemented they can improve the security of smart contracts.
 
 The following requirement:
 <aside class="example" title="A simple requirement">
@@ -270,16 +270,16 @@ not in itself change conformance to this specification.</p>
 <section id="sec-overriding-requirements">
 <h5>Overriding Requirements</h5>
 
-  For some requirements, the statement will include an alternative condition,
-  introduced with the keyword <b>unless</b>, that identifies one or more
-  <dfn data-lt="overriding requirement|overriding requirement(s)">Overriding Requirements</dfn>.
- These are requirements at a higher Security Level, that can be satisfied to achieve conformance
- if the <a>Tested Code</a> does not meet the lower-level requirement as stated.
- In some cases it is necessary to meet more than one <a>Overriding Requirement</a>
- to meet the requirement they override. In this case, the requirements are described as a
- <dfn data-lt="sets of overriding requirements">Set of Overriding Requirements</dfn>.
- It is necessary to meet all the requirements in a <a>Set of Overriding Requirements</a>
- in order to meet the requirement that is overriden.
+For some requirements, the statement will include an alternative condition,
+introduced with the keyword <b>unless</b>, that identifies one or more
+<dfn data-lt="overriding requirement|overriding requirement(s)">Overriding Requirements</dfn>.
+These are requirements at a higher Security Level, that can be satisfied to achieve conformance
+if the <a>Tested Code</a> does not meet the lower-level requirement as stated.
+In some cases it is necessary to meet more than one <a>Overriding Requirement</a>
+to meet the requirement they override. In this case, the requirements are described as a
+<dfn data-lt="sets of overriding requirements">Set of Overriding Requirements</dfn>.
+It is necessary to meet all the requirements in a <a>Set of Overriding Requirements</a>
+in order to meet the requirement that is overriden.
 
 In a number of cases, there will be more than one <a>Overriding Requirement</a> or
 <a>Set of Overriding Requirements</a> that can be met in order to satisfy a given
@@ -347,12 +347,12 @@ and the resulting text does not mislead readers.
 <section id="sec-related-requirements">
   <h5>Related Requirements</h5>
 
-  Many requirements have <dfn>Related Requirements</dfn>, which are requirements
-  that address thematically related issues.
+Many requirements have <dfn>Related Requirements</dfn>, which are requirements
+that address thematically related issues.
 
-  The links to them are provided as useful information.
-  Unlike <a>Overriding Requirements</a>, meeting Related Requirements does not substitute
-  for meeting a specific requirement in order to achieve conformance.
+The links to them are provided as useful information.
+Unlike <a>Overriding Requirements</a>, meeting Related Requirements does not substitute
+for meeting a specific requirement in order to achieve conformance.
   </section>
 
 </section>
@@ -361,88 +361,88 @@ and the resulting text does not mislead readers.
   <section id="sec-intro-why-certify-contracts" class="informative">
   <h3>Why Certify Contracts?</h3>
 
-  A number of smart contracts that power decentralized applications on Ethereum
-  have been found to contain security issues, and today it is often difficult or impossible in practice
-  to see how secure an address or contract is before initiating a transaction.
-  The Defi space in particular has exploded with a flurry of activity, with individuals
-  and organizations approving transactions in token contracts, swapping tokens,
-  and adding liquidity to pools in quick succession, sometimes without stopping to
-  check security. For Ethereum to be trusted as a transaction layer, enterprises
-  storing critical data or financial institutions moving large amounts
-  of capital need a clear signal that a contract has had appropriate security audits.
+A number of smart contracts that power decentralized applications on Ethereum
+have been found to contain security issues, and today it is often difficult or impossible in practice
+to see how secure an address or contract is before initiating a transaction.
+The Defi space in particular has exploded with a flurry of activity, with individuals
+and organizations approving transactions in token contracts, swapping tokens,
+and adding liquidity to pools in quick succession, sometimes without stopping to
+check security. For Ethereum to be trusted as a transaction layer, enterprises
+storing critical data or financial institutions moving large amounts
+of capital need a clear signal that a contract has had appropriate security audits.
 
-  Reviewing early, in particular before production deployment, is especially important
-  in the context of blockchain development because the costs in time, effort, funds,
-  and/or credibility, of attempting to update or patch a smart contract after deployment
-  are generally much higher than in other software development contexts.
+Reviewing early, in particular before production deployment, is especially important
+in the context of blockchain development because the costs in time, effort, funds,
+and/or credibility, of attempting to update or patch a smart contract after deployment
+are generally much higher than in other software development contexts.
 
-  This smart contract security standard is designed to increase confidence
-  in the quality of security audits for smart contracts, and thus to raise trust
-  in the Ethereum ecosystem as a global settlement layer for all types of transactions
-  across all types of industry sectors, for the benefit of the entire Ethereum ecosystem.
+This smart contract security standard is designed to increase confidence
+in the quality of security audits for smart contracts, and thus to raise trust
+in the Ethereum ecosystem as a global settlement layer for all types of transactions
+across all types of industry sectors, for the benefit of the entire Ethereum ecosystem.
 
-  Certification also provides value to the actual or potential users of a smart contract,
-  and others who could be affected by the use or abuse of a particular smart contract but
-  are not themselves direct users.  By limiting exposure to certain known weaknesses
-  through <a>EthTrust Certification</a>, these stakeholders benefit from reduced risk
-  and increased confidence in the security of assets held in or managed by the
-  <a>Tested Code</a>.
+Certification also provides value to the actual or potential users of a smart contract,
+and others who could be affected by the use or abuse of a particular smart contract but
+are not themselves direct users.  By limiting exposure to certain known weaknesses
+through <a>EthTrust Certification</a>, these stakeholders benefit from reduced risk
+and increased confidence in the security of assets held in or managed by the
+<a>Tested Code</a>.
 
-  This assurance is not complete; for example it relies on the competence and integrity
-  of the auditor issuing the certification.  That is generally not completely knowable.
-  Professional reputations can change based on subsequent performance of <a>Tested Code</a>.
-  This is especially so if the <a>Tested Code</a> becomes sufficiently high-profile to motivate exploitation
-  of weaknesses remaining after certification.
+This assurance is not complete; for example it relies on the competence and integrity
+of the auditor issuing the certification.  That is generally not completely knowable.
+Professional reputations can change based on subsequent performance of <a>Tested Code</a>.
+This is especially so if the <a>Tested Code</a> becomes sufficiently high-profile to motivate exploitation
+of weaknesses remaining after certification.
 
-  Finally, smart contract developers and ecosystem stakeholders receive value when others
+Finally, smart contract developers and ecosystem stakeholders receive value when others
   (including direct competitors) complete the certification process, because it means
-  those other contracts are less likely to generate exploitation-related headlines
-  which can lead to negative perceptions of Ethereum technology as insecure or high risk
-  by the general public including business leaders, prospective customers/users,
-  regulators, and investors.
+those other contracts are less likely to generate exploitation-related headlines
+which can lead to negative perceptions of Ethereum technology as insecure or high risk
+by the general public including business leaders, prospective customers/users,
+regulators, and investors.
 
-  The value of smart contract security certification is in some ways analogous to the certification
-  processes applicable to aircraft parts. Most directly, it helps reduce risks for
-  part manufacturers and the integrators who use those parts as components of a
-  more complex structure, by providing assurance of a minimum level of quality.
-  Less directly, these processes significantly reduce aviation accidents
-  and crashes, saving lives and earning the trust of both regulators and customers
-  who consider the safety and risk of the industry and its supporting technology as a whole.
-  Many safety certification processes began as voluntary procedures created by a
-  manufacturer, or specified and required by a consortium of customers representing a
-  significant fraction of the total market. Having proven their value,
-  some of these certification processes are now required by law, to protect the public.
+The value of smart contract security certification is in some ways analogous to the certification
+processes applicable to aircraft parts. Most directly, it helps reduce risks for
+part manufacturers and the integrators who use those parts as components of a
+more complex structure, by providing assurance of a minimum level of quality.
+Less directly, these processes significantly reduce aviation accidents
+and crashes, saving lives and earning the trust of both regulators and customers
+who consider the safety and risk of the industry and its supporting technology as a whole.
+Many safety certification processes began as voluntary procedures created by a
+manufacturer, or specified and required by a consortium of customers representing a
+significant fraction of the total market. Having proven their value,
+some of these certification processes are now required by law, to protect the public.
 
-  We hope the value of the certification process motivates frequent use, and furthers
-  development of automated tools that can make the evaluation process easier and cheaper.
+We hope the value of the certification process motivates frequent use, and furthers
+development of automated tools that can make the evaluation process easier and cheaper.
 
-  As new security vulnerabilities, issues in this specification, and challenges in implementation are discovered,
-  we hope they will lead to both feedback and increased participation in developing and maintaining this specification.
+As new security vulnerabilities, issues in this specification, and challenges in implementation are discovered,
+we hope they will lead to both feedback and increased participation in developing and maintaining this specification.
   </section>
 
   <section id="sec-intro-developing-secure-contracts" class="informative">
   <h3>Developing Secure Smart Contracts</h3>
 
-  Security issues that this specification calls for checking are not necessarily obvious
-  to smart contract developers, especially relative newcomers in a quickly growing field.
+Security issues that this specification calls for checking are not necessarily obvious
+to smart contract developers, especially relative newcomers in a quickly growing field.
 
-  By walking their own code through the certification process, even if no prospective
-  customer requires it, a smart contract developer can discover ways their code is
-  vulnerable to known weaknesses and fix that code prior to deployment.
+By walking their own code through the certification process, even if no prospective
+customer requires it, a smart contract developer can discover ways their code is
+vulnerable to known weaknesses and fix that code prior to deployment.
 
-  Developers ought to make their code as secure as possible. Instead of aiming to fulfil
-  only the requirements to conform at a particular Security Level, ensuring that
-  code implements as many requirements of this specification as possible, per
+Developers ought to make their code as secure as possible. Instead of aiming to fulfil
+only the requirements to conform at a particular Security Level, ensuring that
+code implements as many requirements of this specification as possible, per
   [**[GP] Meet as Many Requirements as Possible**](#req-R-meet-all-possible),
-  helps ensure the developer has considered all the vulnerabilities this specfication addresses.
+helps ensure the developer has considered all the vulnerabilities this specfication addresses.
 
-  Aside from the obvious reputational benefit, developers will learn from this process,
-  improving their understanding of potential weaknesses and thus their ability to avoid
-  them completely in their own work.
+Aside from the obvious reputational benefit, developers will learn from this process,
+improving their understanding of potential weaknesses and thus their ability to avoid
+them completely in their own work.
 
-  For an organization developing and deploying smart contracts, this process reduces the
-  amount of work required for security reviews, and
-  risks both to their credibility, and to their assets and other capital.
+For an organization developing and deploying smart contracts, this process reduces the
+amount of work required for security reviews, and
+risks both to their credibility, and to their assets and other capital.
 
 </section>
 
@@ -478,47 +478,47 @@ SHOULD be notified, as described in [[solidity-reports]].
 
   <section id="conformance">
 
-  This specification defines a number of requirements. As described in
-  <a href="#sec-reading-requirements"></a>, each requirement
-  has a Security Level (<b>[S]</b>, <b>[M]</b>, or <b>[Q]</b>), and a statement of the requirement that
-  <a>Tested Code</a> MUST meet.
+This specification defines a number of requirements. As described in
+<a href="#sec-reading-requirements"></a>, each requirement
+has a Security Level (<b>[S]</b>, <b>[M]</b>, or <b>[Q]</b>), and a statement of the requirement that
+<a>Tested Code</a> MUST meet.
 
-  In order to achieve <a>EthTrust Certification</a> at a specific Security Level, the
-  <a>Tested Code</a> MUST meet <b>all the requirements for that Security Level</b>,
-  including all the requirements for lower Security Levels. Some requirements can either be
-  met directly, or by meeting one or more <a>Overriding requirements</a>
-  that mean the requirement is considered met.
+In order to achieve <a>EthTrust Certification</a> at a specific Security Level, the
+<a>Tested Code</a> MUST meet <b>all the requirements for that Security Level</b>,
+including all the requirements for lower Security Levels. Some requirements can either be
+met directly, or by meeting one or more <a>Overriding requirements</a>
+that mean the requirement is considered met.
 
-  This document does not create an affirmative duty of compliance on any party, though
-  requirements to comply with it could be created by contract negotiations
-  or other processes with prospective customers or investors.
+This document does not create an affirmative duty of compliance on any party, though
+requirements to comply with it could be created by contract negotiations
+or other processes with prospective customers or investors.
 
-  Section <a href="#sec-good-practice-recommendations"></a>,
-  contains further recommendations. Although they are formatted similarly to requirements,
-  they begin with a "level" marker **[GP]**. There is no requirement to test for these;
-  however careful implementation and testing is RECOMMENDED.
+Section <a href="#sec-good-practice-recommendations"></a>,
+contains further recommendations. Although they are formatted similarly to requirements,
+they begin with a "level" marker **[GP]**. There is no requirement to test for these;
+however careful implementation and testing is RECOMMENDED.
 
-  Note that good implementation of the <a href="#sec-good-practice-recommendations"></a> can enhance security,
-  but in some cases incomplete or low-quality implementation could **reduce** security.
+Note that good implementation of the <a href="#sec-good-practice-recommendations"></a> can enhance security,
+but in some cases incomplete or low-quality implementation could **reduce** security.
 
   <section id="sec-conformance-claims">
     <h3>Conformance Claims</h3>
 
-  To grant <a>Tested Code</a> <dfn data-lt="EthTrust Certified">EthTrust Certification</dfn>,
-  an auditor provides a <a>Valid Conformance Claim</a>, that the <a>Tested Code</a>
-  meets the requirements of the <a>Security Level</a> for which it is certified.
+To grant <a>Tested Code</a> <dfn data-lt="EthTrust Certified">EthTrust Certification</dfn>,
+an auditor provides a <a>Valid Conformance Claim</a>, that the <a>Tested Code</a>
+meets the requirements of the <a>Security Level</a> for which it is certified.
 
-  There is no required format for a <a>Valid conformance claim</a> for Version 1 or Version 2 of this
-  specification, beyond being legible and containing the required information
-  as specified in this section.
+There is no required format for a <a>Valid conformance claim</a> for Version 1 or Version 2 of this
+specification, beyond being legible and containing the required information
+as specified in this section.
 
 <aside class="note" title="Machine-readable formats">
-  The Working Group believes that a standard machine-readable format for Conformance Claims
-  would be useful, and seeks feedback on this question as well as
-  concrete proposals for such a format, which MAY be adopted in a subsequent version.
+The Working Group believes that a standard machine-readable format for Conformance Claims
+would be useful, and seeks feedback on this question as well as
+concrete proposals for such a format, which MAY be adopted in a subsequent version.
 </aside>
 
-  A <dfn>Valid Conformance Claim</dfn> MUST include:
+A <dfn>Valid Conformance Claim</dfn> MUST include:
 
   - The date on which the certification was issued, in 'YYYY-MM-DD' format.
   - The <a>EVM version(s)</a> (of those listed at [[!EVM-version]]) for which the certification is valid.
@@ -554,12 +554,12 @@ A <a>Valid Conformance Claim</a> for <a>Security Level [Q]</a> MUST include:
 - A bounded range of Solidity Compiler Versions for which the certification is valid. Note that this range MAY differ from the range declared
   in `pragama` directives present in the <a>Tested Code</a>.
 
-  A <a>Valid Conformance Claim</a> SHOULD include:
+A <a>Valid Conformance Claim</a> SHOULD include:
 
   - A contact address for feedback such as questions about or challenges to the certification.
   - Descriptions of conformance to the good practices described in <a href="#sec-good-practice-recommendations"></a>.
 
-  A <a>Valid Conformance Claim</a> MAY include:
+A <a>Valid Conformance Claim</a> MAY include:
 
   - An address where a [[!SHA3-256]] hash of the conformance claim has been recorded
     on an identified network, e.g. Ethereum Mainnet.
@@ -736,37 +736,37 @@ Hardcoding a minimum or maximum value can lead to problems reflecting reality.
 
   <h3>External Interactions and Re-entrancy Attacks</h3>
 
-  Code that relies on external code can introduce multiple attack vectors.
-  This includes cases where an external dependency contains malicious code
-  or has been subject to malicious manipulation through security vulnerabilities.
-  However, failure to adequately manage the possible outcomes of an external call
-  can also introduce security vulnerabilities.
+Code that relies on external code can introduce multiple attack vectors.
+This includes cases where an external dependency contains malicious code
+or has been subject to malicious manipulation through security vulnerabilities.
+However, failure to adequately manage the possible outcomes of an external call
+can also introduce security vulnerabilities.
 
-  One of the most commonly cited vulnerabilities in Ethereum Smart Contracts is
-  <dfn>Re-entrancy Attacks</dfn>. These attacks allow malicious contracts to
-  make a call back into the contract that called it before the originating contract's
-  function call has been completed. This effect causes the calling contract to
-  complete its processing in unintended ways, for example, by making unexpected
-  changes to its state variables.
+One of the most commonly cited vulnerabilities in Ethereum Smart Contracts is
+<dfn>Re-entrancy Attacks</dfn>. These attacks allow malicious contracts to
+make a call back into the contract that called it before the originating contract's
+function call has been completed. This effect causes the calling contract to
+complete its processing in unintended ways, for example, by making unexpected
+changes to its state variables.
 
 While the [c-e-i] implementation pattern provides crucial protection, emerging cross-contract interaction patterns may require additional safeguards.
 Regular review of interaction patterns can help identify new reentrancy vectors.
 
-  A <dfn>Read-only Re-entrancy Attack</dfn> arises when a view function reads a state that will subsequently be changed.
-  These are a particular additional danger
-  because such functions often lack safeguards since they don't modify the contract's state.
-  However, if the state is inconsistent, incorrect values could be reported.
-  This deception can mislead other protocols into reading inaccurate state values,
-  potentially leading to unintended actions or outcomes.
+A <dfn>Read-only Re-entrancy Attack</dfn> arises when a view function reads a state that will subsequently be changed.
+These are a particular additional danger
+because such functions often lack safeguards since they don't modify the contract's state.
+However, if the state is inconsistent, incorrect values could be reported.
+This deception can mislead other protocols into reading inaccurate state values,
+potentially leading to unintended actions or outcomes.
 
-  This issue can affect other contracts that rely on the accurate reporting of state from these view functions,
-  as well as the contract itself being re-entered. Consequently, third parties that call a Smart Contract,
-  and protocols that are composed of a <a>Set of Contracts</a> are potentially vulnerable to Read-only Re-entrancy.
+This issue can affect other contracts that rely on the accurate reporting of state from these view functions,
+as well as the contract itself being re-entered. Consequently, third parties that call a Smart Contract,
+and protocols that are composed of a <a>Set of Contracts</a> are potentially vulnerable to Read-only Re-entrancy.
 
   <aside class="example" title="Rari: a read-only re-entrancy attack">In the Rari hack a large flashloaned
-  deposit was made in order to borrow ETH from the cETH contract. During the borrow call, `exitMarket()` was called within the Comptroller,
-  which reads the state of the cETH contract, performing read-only re-entrancy of cETH. Since the cETH contract’s state had not yet recorded the
-  borrow, the attacker was able to redeem their initial deposit while keeping their borrowed funds. For more information on the hack, see [[certik-rari]].
+deposit was made in order to borrow ETH from the cETH contract. During the borrow call, `exitMarket()` was called within the Comptroller,
+which reads the state of the cETH contract, performing read-only re-entrancy of cETH. Since the cETH contract’s state had not yet recorded the
+borrow, the attacker was able to redeem their initial deposit while keeping their borrowed funds. For more information on the hack, see [[certik-rari]].
   </aside>
 
 
@@ -806,10 +806,10 @@ checking for Gas Griefing needs to take into account the goals and business logi
 the <a>Tested Code</a> implements.</p>
 
 <p><dfn>Gas Siphoning</dfn> is another abuse of the Gas mechanism that Ethereum uses
-  to regulate the consumption of computing power, where attackers steal Gas from vulnerable
-  contracts either to deny service or for their own gain (e.g. to mint <a>Gas Tokens</a>).
-  Similar to Gas Griefing, checking for Gas Siphoning requires careful consideration of the
-   goals and business logic that the <a>Tested Code</a> implements.</p>
+to regulate the consumption of computing power, where attackers steal Gas from vulnerable
+contracts either to deny service or for their own gain (e.g. to mint <a>Gas Tokens</a>).
+Similar to Gas Griefing, checking for Gas Siphoning requires careful consideration of the
+goals and business logic that the <a>Tested Code</a> implements.</p>
 
 <p><dfn>Gas Tokens</dfn> use Gas when minted and free slightly less Gas when burned,
 provided the EVM refunds a sufficient quantity of Gas for clearing the state.
@@ -865,9 +865,9 @@ While a primary motivation for this attack class is to facilitate <a>MEV</a> att
 they can also be used to set up conditions for other types of attack.
 
 <aside class="example warning" title="Ordering Attacks">
-  The setup period of a voting contract can sometimes be exploited by maliciously suppressing or front-running voting option proposals
-  to limit the number of candidates eligible in the voting stage.
-  A block proposer can maliciously schedule such a voting initialization period when they know they will produce a sequence of blocks.
+The setup period of a voting contract can sometimes be exploited by maliciously suppressing or front-running voting option proposals
+to limit the number of candidates eligible in the voting stage.
+A block proposer can maliciously schedule such a voting initialization period when they know they will produce a sequence of blocks.
 </aside>
 
 There are various types of <dfn>Ordering Attacks</dfn>:
@@ -985,10 +985,10 @@ or possibly in some cases can only be thoroughly tested "<i>in situ</i>".
 <section id="sec-realtime-monitoring-considerations">
   <h3>Post-deployment Monitoring</h3>
 
-  While monitoring Smart Contracts after deployment is beyond the formal scope of this specification, it is an important consideration for Smart Contract security.
-  New attack techniques arise from time to time, and some attacks can only be prevented by active measures implemented in real time.
-  Monitoring of on-chain activity can help detect attacks before it is too late
-  to stop them.
+While monitoring Smart Contracts after deployment is beyond the formal scope of this specification, it is an important consideration for Smart Contract security.
+New attack techniques arise from time to time, and some attacks can only be prevented by active measures implemented in real time.
+Monitoring of on-chain activity can help detect attacks before it is too late
+to stop them.
 
 Monitoring, backed by an automated dataset, can enable identifying an attack that has occurred elsewhere, even on other blockchains.
 
@@ -1082,7 +1082,7 @@ affected by a Network Upgrade will be sufficient to renew <a>EthTrust Certificat
   </ul>
 
   <aside class="example" title="Security Operations Example">
-    A robust security operations center (SOC) will monitor for:
+A robust security operations center (SOC) will monitor for:
     <ul>
       <li>Unusual transaction patterns</li>
       <li>Suspicious administrative actions</li>
@@ -1092,9 +1092,9 @@ affected by a Network Upgrade will be sufficient to renew <a>EthTrust Certificat
   </aside>
 
   <aside class="note" title="Continuous Security">
-    Security is an ongoing process requiring regular assessment and updates to match
-    evolving threats and organizational changes. Regular drills and updates to security
-    procedures help maintain operational readiness.
+Security is an ongoing process requiring regular assessment and updates to match
+evolving threats and organizational changes. Regular drills and updates to security
+procedures help maintain operational readiness.
   </aside>
 
 </section>
@@ -1157,9 +1157,9 @@ affected by a Network Upgrade will be sufficient to renew <a>EthTrust Certificat
   combined or when economic incentives are sufficiently large.</p>
 
   <aside class="note" title="Dynamic Testing Environment">
-    Testing these scenarios requires dynamic environments that can simulate complex market
-    conditions and actor behaviors. Simple unit tests or static analysis tools cannot
-    adequately model these adversarial situations.
+Testing these scenarios requires dynamic environments that can simulate complex market
+conditions and actor behaviors. Simple unit tests or static analysis tools cannot
+adequately model these adversarial situations.
   </aside>
 
   <p>By modeling these scenarios during pre-deployment, developers can:</p>
@@ -1188,19 +1188,19 @@ Some common testing methods:
 <section id="sec-testing-unit">
   <h3>Unit Testing</h3>
 
-  The practice of <dfn>Unit Testing</dfn> is based on many individual tests, each testing a specific requirement.
-  This approach can be incorporated into <dfn>Test-driven Development</dfn>,
-  where tests are written alongside the development of code, and added to a set of unit tests, to ensure that changes do not introduce problems
-  that had previously been considered resolved or had not existed.
+The practice of <dfn>Unit Testing</dfn> is based on many individual tests, each testing a specific requirement.
+This approach can be incorporated into <dfn>Test-driven Development</dfn>,
+where tests are written alongside the development of code, and added to a set of unit tests, to ensure that changes do not introduce problems
+that had previously been considered resolved or had not existed.
 
-  An important factor in the value of Unit Testing is <dfn>Test Coverage</dfn>: ensuring that there are enough Unit Tests to cover the range of possibilities
-  being tested for. In many cases, this means not just ensuring each requirement has a test,
-  but that each way of triggering a requirement has a test. For example, it is possible to include a `tx.origin` statement directly in smart contract code,
-  but it is also possible to include it using `assembly {}`. Unless a single test covers both cases, there is not sufficient <a>Test Coverage</a>
-  of the specific requirement not to use `tx.origin`
+An important factor in the value of Unit Testing is <dfn>Test Coverage</dfn>: ensuring that there are enough Unit Tests to cover the range of possibilities
+being tested for. In many cases, this means not just ensuring each requirement has a test,
+but that each way of triggering a requirement has a test. For example, it is possible to include a `tx.origin` statement directly in smart contract code,
+but it is also possible to include it using `assembly {}`. Unless a single test covers both cases, there is not sufficient <a>Test Coverage</a>
+of the specific requirement not to use `tx.origin`
 
-  Unit Testing is regularly automated by building a test harness that ensures the Unit Tests are run whenever something is changed,
-  whether smart contract code, or the environment in which it is operating, including integration with new services or systems.
+Unit Testing is regularly automated by building a test harness that ensures the Unit Tests are run whenever something is changed,
+whether smart contract code, or the environment in which it is operating, including integration with new services or systems.
 
 </section>
 <section id="sec-testing-static">
@@ -1255,7 +1255,7 @@ The Working Group believes that manual Static Analysis is sufficient to determin
   to evaluate the effectiveness of test cases.
   If the test suite detects the mutation, it is considered "killed"; otherwise, the mutation "survives," indicating potential gaps in test coverage.</p>
 
-  There are various categories of Mutation that can be useful for testing smart contracts, including:
+There are various categories of Mutation that can be useful for testing smart contracts, including:
 
   <dl>
     <dt><dfn>State Variable Mutations</dfn>:</dt>
@@ -1286,16 +1286,16 @@ The Working Group believes that manual Static Analysis is sufficient to determin
     </dd>
   </dl>
 
-  Mutation testing relies on a <dfn>Mutation Score</dfn> - the ratio of killed mutations to the total number of non-equivalent mutations.
-  It is important to maintain high mutation scores for critical contract components,
-  though achieving 100% can be impractical due to equivalent mutations and implementation constraints.
+Mutation testing relies on a <dfn>Mutation Score</dfn> - the ratio of killed mutations to the total number of non-equivalent mutations.
+It is important to maintain high mutation scores for critical contract components,
+though achieving 100% can be impractical due to equivalent mutations and implementation constraints.
 
-  Many tools and mutation operators can help to implement mutation testing effectively.
-  A good practice to leverage and build on public resources where possible, always checking licensing restrictions.
+Many tools and mutation operators can help to implement mutation testing effectively.
+A good practice to leverage and build on public resources where possible, always checking licensing restrictions.
 
-  Another important part of Mutation Testing is the set of equivalence rules that help identify mutations that don't meaningfully change the contract behavior.
-  These rules help reduce the testing effort by eliminating mutations that cannot reveal defects.
-  This approach complements <a>Fuzzing</a> by providing a different perspective on test suite quality.
+Another important part of Mutation Testing is the set of equivalence rules that help identify mutations that don't meaningfully change the contract behavior.
+These rules help reduce the testing effort by eliminating mutations that cannot reveal defects.
+This approach complements <a>Fuzzing</a> by providing a different perspective on test suite quality.
 </section>
 
 <section id="sec-testing-symbolic">
@@ -1381,19 +1381,19 @@ correctly implemented, further enhance the Security of smart contracts.
 However it is not necessary to test them to conform to this specification.
 
 <aside class="note">
-  This scheme has been compared to the conformance approach used in
-  the "OWASP Application Security Verification Standard" specification family
-  [[ASVS]]. There are some clear differences, largely resulting from the differences
-  between the general applicability ASVS aims to achieve, and this specification's
-  very precise focus on testing the security of Ethereum smart contracts written in Solidity.
+This scheme has been compared to the conformance approach used in
+the "OWASP Application Security Verification Standard" specification family
+[[ASVS]]. There are some clear differences, largely resulting from the differences
+between the general applicability ASVS aims to achieve, and this specification's
+very precise focus on testing the security of Ethereum smart contracts written in Solidity.
 </aside>
 
-  The vulnerabilities addressed by this specification come from a number of sources,
-  including Solidity Security Alerts [[solidity-alerts]], the
-  Smart Contract Weakness Classification [[swcregistry]], TMIO Best practices
-  [[tmio-bp]], various sources of Security Advisory Notices,
-  discussions in the Ethereum community and researchers presenting newly discovered vulnerabilities,
-  and the extensive practical experience of participants in the Working Group.
+The vulnerabilities addressed by this specification come from a number of sources,
+including Solidity Security Alerts [[solidity-alerts]], the
+Smart Contract Weakness Classification [[swcregistry]], TMIO Best practices
+[[tmio-bp]], various sources of Security Advisory Notices,
+discussions in the Ethereum community and researchers presenting newly discovered vulnerabilities,
+and the extensive practical experience of participants in the Working Group.
 
 <section id="sec-levels-one">
   <h2>Security Level [S]</h2>
@@ -1416,10 +1416,10 @@ To be eligible for <a>EthTrust Certification</a> for
     <a>Tested code</a> MUST create hashes for transactions that incorporate <code>chainid</code> values
     following the recommendation described in [[!EIP-155]]</div>
 
-  [[!EIP-155]] describes an enhanced hashing rule, incorporating a chain identifier in the hash.
-  While this only provides a guarantee against replay attacks if there is a unique chain identifier,
-  using the mechanism described provides a certain level of robustness and makes it much more difficult
-  to execute a replay attack.
+[[!EIP-155]] describes an enhanced hashing rule, incorporating a chain identifier in the hash.
+While this only provides a guarantee against replay attacks if there is a unique chain identifier,
+using the mechanism described provides a certain level of robustness and makes it much more difficult
+to execute a replay attack.
 
   <div id="req-1-no-create2">
   <p><b>[S] No <code>CREATE2</code></b><br>
@@ -1430,11 +1430,11 @@ To be eligible for <a>EthTrust Certification</a> for
     <li><a href="#req-2-documented"><b>[M] Document Special Code Use</b></a>,</li>
   </ul></div>
 
-  The <code>CREATE2</code> opcode provides the ability to interact with addresses
-  that do not exist yet on-chain but could possibly eventually contain code.
-  While this can be useful for deployments and counterfactual interactions with contracts,
-  it can allow external calls to code that is not yet known or can be altered, and could turn out to be
-  malicous or insecure due to errors or weak protections.
+The <code>CREATE2</code> opcode provides the ability to interact with addresses
+that do not exist yet on-chain but could possibly eventually contain code.
+While this can be useful for deployments and counterfactual interactions with contracts,
+it can allow external calls to code that is not yet known or can be altered, and could turn out to be
+malicous or insecure due to errors or weak protections.
 
   <p id="req-1-no-tx.origin">
   <b>[S] No <code>tx.origin</code></b><br>
@@ -1443,10 +1443,10 @@ To be eligible for <a>EthTrust Certification</a> for
   <a href="#req-3-verify-tx.origin"><b>[Q] Verify <code>tx.origin</code> Usage</b></a></p>
 
 <p><code>tx.origin</code> is a global variable in Solidity which returns the address
-  of the account that sent the transaction. A contract using <code>tx.origin</code>
-  can allow an authorized account to call into a malicious contract,
-  enabling the malicious contract to pass authorization checks in unintended cases.
-  It is better to use <code>msg.sender</code> for authorization instead of <code>tx.origin</code>.</p>
+of the account that sent the transaction. A contract using <code>tx.origin</code>
+can allow an authorized account to call into a malicious contract,
+enabling the malicious contract to pass authorization checks in unintended cases.
+It is better to use <code>msg.sender</code> for authorization instead of <code>tx.origin</code>.</p>
 
 See also
   <a href="https://swcregistry.io/docs/SWC-115">SWC-115</a> [[swcregistry]] for examples.
@@ -1458,9 +1458,9 @@ See also
   <br><b>unless</b> it meets the <a>Overriding Requirement</a>
   <a href="#req-2-verify-exact-balance-check"><b>[M] Verify Exact Balance Checks</b></a>.</p>
 
-  Testing the balance of an account as a basis for some action has risks associated with
-  unexpected receipt of ether or another token, including tokens deliberately transfered
-  to cause such tests to fail as an <a>MEV</a> attack.
+Testing the balance of an account as a basis for some action has risks associated with
+unexpected receipt of ether or another token, including tokens deliberately transfered
+to cause such tests to fail as an <a>MEV</a> attack.
 
   See also the <a>Related Requirements</a>
   <a href="#req-2-random-enough"><b>[M] Sources of Randomness</b></a>,
@@ -1940,13 +1940,13 @@ means that the <a>Tested Code</a> has been carefully reviewed by a human auditor
 doing a manual analysis, and important security issues have been addressed
 to their satisfaction.</p>
 
-  This level includes a number of <a>Overriding Requirements</a> for cases
-  when <a>Tested Code</a> does not meet a <a>Security Level [S]</a> requirement directly,
-  because it uses an uncommon feature that introduces higher risk, or because
-  in certain circumstsances testing that the requirement has been met requires human judgement.
-  Passing the relevant <a>Overriding Requirement</a> tests that the feature has been implemented
-  sufficiently well to satisfy the auditor that it does not expose the <a>Tested Code</a> to the
-  known vulnerabilities identified in this Security Level.
+This level includes a number of <a>Overriding Requirements</a> for cases
+when <a>Tested Code</a> does not meet a <a>Security Level [S]</a> requirement directly,
+because it uses an uncommon feature that introduces higher risk, or because
+in certain circumstsances testing that the requirement has been met requires human judgement.
+Passing the relevant <a>Overriding Requirement</a> tests that the feature has been implemented
+sufficiently well to satisfy the auditor that it does not expose the <a>Tested Code</a> to the
+known vulnerabilities identified in this Security Level.
 
   <p id="req-2-pass-l1">
   <b>[M] Pass Security Level [S]</b><br>
@@ -2027,8 +2027,8 @@ If such checks are used it is important that they are protected against this pos
 <section id="sec-2-unicode">
   <h4>Text and homoglyph attacks</h4>
 
-  The requirements in this section are related to the security advisory [[CVE-2021-42574]]
-  and [[CWE-94]], "Improper Control of Generation of Code", also called "Code Injection".
+The requirements in this section are related to the security advisory [[CVE-2021-42574]]
+and [[CWE-94]], "Improper Control of Generation of Code", also called "Code Injection".
 
   <p id="req-2-unicode-bdo">
     <b>[M] No Unnecessary Unicode Controls</b><br>
@@ -2129,23 +2129,23 @@ This enables calling code to explicitly avoid viewing inconsistent data.
 
 <aside class="example warning" title="INSECURE approach: relaying on values of view functions that can be reentered">
 
-  This is a simple case of read-only-reentrancy attack.
+This is a simple case of read-only-reentrancy attack.
 
-  The contract <code>Reentered</code> has a view function that determines a price based on <code><var>totalSupply</var></code>
-  and <code><var>numberOfEther</var></code> in a specific LPToken,
-  and a public non-Reentrant function that sells the LP token and sends the ETH received to the users that called it.
+The contract <code>Reentered</code> has a view function that determines a price based on <code><var>totalSupply</var></code>
+and <code><var>numberOfEther</var></code> in a specific LPToken,
+and a public non-Reentrant function that sells the LP token and sends the ETH received to the users that called it.
 
-  When the attack function is called in the <code>Attacker</code> contract it will reduce the value of
-  <code><var>numberOfEther</var></code> in the <code>Reentered</code> contract,
-  and trigger the <code>Attacker</code> contract's <code>receive()</code> function,
-  <b>before</b> updating <code><var>totalSupply</var></code>, by preventing the instruction
-  <code>LPToken.burnFrom(msg.sender, amount);</code> from executing.
+When the attack function is called in the <code>Attacker</code> contract it will reduce the value of
+<code><var>numberOfEther</var></code> in the <code>Reentered</code> contract,
+and trigger the <code>Attacker</code> contract's <code>receive()</code> function,
+<b>before</b> updating <code><var>totalSupply</var></code>, by preventing the instruction
+<code>LPToken.burnFrom(msg.sender, amount);</code> from executing.
 
-  The <code>receive()</code> function of the <code>Attacker</code> contract
-  calls the <code>buyToken()</code> function of the <code>Reentered</code> contract under attack.
-  Since the value of <code><var>numberOfEther</var></code> has been modified,
-  but the <code><var>totalSupply</var></code> has not,
-  the <code>buyToken()</code> function in the attacked contract will request the wrong number of tokens in exchange.
+The <code>receive()</code> function of the <code>Attacker</code> contract
+calls the <code>buyToken()</code> function of the <code>Reentered</code> contract under attack.
+Since the value of <code><var>numberOfEther</var></code> has been modified,
+but the <code><var>totalSupply</var></code> has not,
+the <code>buyToken()</code> function in the attacked contract will request the wrong number of tokens in exchange.
 
 <pre><code class="solidity">
 // SPDX-License-Identifier: MIT
@@ -2225,9 +2225,10 @@ See also the <a>Related Requirement</a>: <a href="#req-3-all-valid-inputs"><b>[Q
   <li>Use of oracles and pseudo-randomness,</li>
 </ul>
 
-	<p><b>and</b> MUST describe how the <a>Tested Code</a> protects against misuse or errors in these cases,
-	<b>and</b> the documentation MUST be available to anyone who can call the <a>Tested Code</a>.
-	</p>
+<p><b>and</b> MUST describe how the <a>Tested Code</a> protects against misuse or errors in these cases,
+<b>and</b> the documentation MUST be available to anyone who can call the <a>Tested Code</a>.
+</p>
+
 <p>This is part of several <a>Sets of Overriding Requirements</a>, one for each of<ul>
   <li><a href="#req-1-no-create2"><b>[S] No <code>CREATE2</code></b></a>,</li>
   <li><a href="#req-1-self-destruct"><b>[S] No <code>selfdestruct()</code></b></a>,</li>
@@ -2236,14 +2237,14 @@ See also the <a>Related Requirement</a>: <a href="#req-3-all-valid-inputs"><b>[Q
   <li><a href="#req-1-delegatecall"><b>[S] No <code>delegatecall()</code></b></a>.</li>
 	</ul></div>
 
-  There are legitimate uses for all of these coding patterns, but they are also potential
-  causes of security vulnerabilities. <a>Security Level [M]</a> therefore requires testing
-  that the use of these patterns is explained and justified,
-  and that they are used in a manner that does not introduce known vulnerabilities.
+There are legitimate uses for all of these coding patterns, but they are also potential
+causes of security vulnerabilities. <a>Security Level [M]</a> therefore requires testing
+that the use of these patterns is explained and justified,
+and that they are used in a manner that does not introduce known vulnerabilities.
 
-  The requirement to document the use of external calls applies to <b>all</b> external calls
-  in the tested code, whether or not they meet the <a>Related Requirement</a>
-  <a href="#req-1-use-c-e-i"><b>[S] Use Check-Effects-Interaction</b></a>.
+The requirement to document the use of external calls applies to <b>all</b> external calls
+in the tested code, whether or not they meet the <a>Related Requirement</a>
+<a href="#req-1-use-c-e-i"><b>[S] Use Check-Effects-Interaction</b></a>.
 
 <p>See also the <a>Related requirements</a>:
   <a href="#req-3-documented"><b>[Q] Document Contract Logic</b></a>,
@@ -2568,6 +2569,18 @@ Some solidity compiler bugs described in <a href="#sec-1-compiler-bugs"></a> hav
 <p class="note">Implementing the Recommended Good Practice
 <a href="#req-R-use-latest-compiler"><b>[GP] Use Latest Compiler</b></a> means that <a>Tested Code</a>
 passes all requirements in this subsection.</p>
+
+<p id="req-2-compiler-SOL-2025-1">
+<b>[M] Compiler Bug SOL-2025-1</b><br>
+<a>Tested code</a> that can determine that a particular array item crosses the storage boundary space (2**256), and clears that array entry
+MUST NOT use a Solidity compiler version earlier than 0.8.32.
+</p>
+
+Until 0.8.32 the compiler did not correctly account for the possibility that storage space would loop around the 2**256 boundary,
+meaning that some operaiotns would not correctly copy or clear data.
+
+See also the [18 December 2025 security alert](https://www.soliditylang.org/blog/2025/12/18/lost-storage-array-write-on-slot-overflow-bug/),
+which includes examples of how the bug is triggered, and remediation advice.
 
 <p id="req-2-compiler-SOL-2023-1">
   <b>[M] Solidity Compiler Bug 2023-1</b><br>
@@ -2977,38 +2990,38 @@ The requirements in this section extend the coverage required to meet the <a>Sec
 there are multiple requirements at this level that require the documentation mandated
 in this subsection.
 
-  <p id="req-3-documented">
-    <b>[Q] Document Contract Logic</b><br>
-    A specification of the business logic that the <a>Tested code</a> functionality is intended
-    to implement MUST be available to anyone who can call the <a>Tested Code</a>.</p>
+<p id="req-3-documented">
+<b>[Q] Document Contract Logic</b><br>
+A specification of the business logic that the <a>Tested code</a> functionality is intended
+to implement MUST be available to anyone who can call the <a>Tested Code</a>.</p>
 
-  Contract Logic documented in a human-readable format and with enough detail that
-  functional correctness and safety assumptions for special code use can be validated by auditors
-  helps them assess complex code more efficiently and with higher confidence.
+Contract Logic documented in a human-readable format and with enough detail that
+functional correctness and safety assumptions for special code use can be validated by auditors
+helps them assess complex code more efficiently and with higher confidence.
 
-  It is important to document how the logic protects against potential attacks such as <a>Flash Loan Attacks</a>
-  (especially on governance or price manipulation), MEV, and other complex attacks that take advantage of
-  ecosystem features or tokenomics.
+It is important to document how the logic protects against potential attacks such as <a>Flash Loan Attacks</a>
+(especially on governance or price manipulation), MEV, and other complex attacks that take advantage of
+ecosystem features or tokenomics.
 
-  <p id="req-3-document-system">
-    <b>[Q] Document System Architecture</b><br>
-    Documentation of the system architecture for the <a>Tested code</a> MUST be provided that
-    conveys the overrall system design, privileged roles, security assumptions and intended usage.</p>
+<p id="req-3-document-system">
+<b>[Q] Document System Architecture</b><br>
+Documentation of the system architecture for the <a>Tested code</a> MUST be provided that
+conveys the overrall system design, privileged roles, security assumptions and intended usage.</p>
 
-  System documentation provides auditor(s) information to
-  understand security assumptions and ensure functional correctness. It is helpful if
-  system documentation is included or referenced in a README file of the code repository,
-  alongside documentation for how the source code can be tested, built and deployed.
+System documentation provides auditor(s) information to
+understand security assumptions and ensure functional correctness. It is helpful if
+system documentation is included or referenced in a README file of the code repository,
+alongside documentation for how the source code can be tested, built and deployed.
 
-  The management of variables and more complex data structures over time is an important part of this documentation.
-  That aspect of this requirement is likely to be met through work to meet the <a>Related Requirement</a>
-  <a href="#req-3-enough-gas"><b>[Q] Manage Gas Use Increases</b></a>.
-  See also the <a>Related Requirement</a>  <a href="#req-3-annotate"><b>[Q] Annotate Code with NatSpec</b></a>.
+The management of variables and more complex data structures over time is an important part of this documentation.
+That aspect of this requirement is likely to be met through work to meet the <a>Related Requirement</a>
+<a href="#req-3-enough-gas"><b>[Q] Manage Gas Use Increases</b></a>.
+See also the <a>Related Requirement</a>  <a href="#req-3-annotate"><b>[Q] Annotate Code with NatSpec</b></a>.
 
-  <p id="req-3-document-threats">
-    <b>[Q] Document Threat Models</b><br>
- Documented Threat Models for the <a>Tested code</a> MUST be provided,
- describing each threat, security assumptions, expected responses, and expected outcomes.</p>
+<p id="req-3-document-threats">
+<b>[Q] Document Threat Models</b><br>
+Documented Threat Models for the <a>Tested code</a> MUST be provided,
+describing each threat, security assumptions, expected responses, and expected outcomes.</p>
 
 A <dfn>Threat Model</dfn> is a tool to help prepare for a variety of attacks that might be raised, either indivudally or in concert,
 providing a set of hypothetical but possible scenarios, in order to ensure the <a>Tested Code</a> can adequately withstand them.
@@ -3023,30 +3036,30 @@ A good Threat Model will cover a range of possiblities, including
 
 And other scenarios as well as combinations of such scenarios that could overwhelm the <a>Tested Code</a>'s defenses against them.
 
-  <p id="req-3-annotate">
-    <b>[Q] Annotate Code with NatSpec</b><br>
-    All public interfaces contained in the <a>Tested code</a> MUST be annotated with inline
-    comments according to the [[NatSpec]] format that explain the intent behind each function, parameter,
-    event, and return variable, along with developer notes for safe usage.</p>
+<p id="req-3-annotate">
+<b>[Q] Annotate Code with NatSpec</b><br>
+All public interfaces contained in the <a>Tested code</a> MUST be annotated with inline
+comments according to the [[NatSpec]] format that explain the intent behind each function, parameter,
+event, and return variable, along with developer notes for safe usage.</p>
 
-    Inline comments are important to ensure that developers and auditors understand the intent behind
-    each function and other code components. <dfn>Public Interfaces</dfn> means anything
-    that would be contained in the ABI of the compiled <a>Tested code</a>. It is also recommended to
-    use inline comments for private or internal functions that implement sensitive and/or complex logic.
+Inline comments are important to ensure that developers and auditors understand the intent behind
+each function and other code components. <dfn>Public Interfaces</dfn> means anything
+that would be contained in the ABI of the compiled <a>Tested code</a>. It is also recommended to
+use inline comments for private or internal functions that implement sensitive and/or complex logic.
 
-    Following the [[NatSpec]] format allows these inline comments to
-    be understood by the Solidity compiler for extracting them into a machine-readable format that could be
-    used by other third-party tools for security assessments and automatic documentation,
-    including documentation shown to users by wallets that integrate with source code
-    verification tools like <a href="https://sourcify.dev">Sourcify</a>. This could also be used
-    to generate specifications that fully or partially satisfy the
-    Requirement to <a href="#req-3-documented"><b>[Q] Document Contract Logic</b></a>.
+Following the [[NatSpec]] format allows these inline comments to
+be understood by the Solidity compiler for extracting them into a machine-readable format that could be
+used by other third-party tools for security assessments and automatic documentation,
+including documentation shown to users by wallets that integrate with source code
+verification tools like <a href="https://sourcify.dev">Sourcify</a>. This could also be used
+to generate specifications that fully or partially satisfy the
+Requirement to <a href="#req-3-documented"><b>[Q] Document Contract Logic</b></a>.
 
-  <p id="req-3-implement-as-documented">
-  <b>[Q] Implement as Documented</b><br>
-  The <a>Tested code</a> MUST behave as described in the documentation provided for
-  <a href="#req-3-documented"><b>[Q] Document Contract Logic</b></a>, <b>and</b>
-  <a href="#req-3-document-system"><b>[Q] Document System Architecture</b></a>.</p>
+<p id="req-3-implement-as-documented">
+<b>[Q] Implement as Documented</b><br>
+The <a>Tested code</a> MUST behave as described in the documentation provided for
+<a href="#req-3-documented"><b>[Q] Document Contract Logic</b></a>, <b>and</b>
+<a href="#req-3-document-system"><b>[Q] Document System Architecture</b></a>.</p>
 
 The requirements at <a>Security Level [Q]</a> to provide documentation are important. However, it is
 also crucial that the <a>Tested Code</a> actually behaves as documented. If it does not,
@@ -3101,8 +3114,8 @@ it is important to have a mechanism to revoke and transfer those permissions.
 
 <p id="req-3-no-single-admin-eoa">
   <b>[Q] No Single Admin EOA for Privileged Actions</b><br>
-  If the <a>Tested code</a> makes uses of Access Control for privileged actions, it MUST ensure that all critical administrative tasks require multiple signatures to be executed,
-  unless there is a multisg admin that has greater privileges and can revoke permissions in case of a compromised or rogue EOA and reverse any adverse action the EOA has taken.
+If the <a>Tested code</a> makes uses of Access Control for privileged actions, it MUST ensure that all critical administrative tasks require multiple signatures to be executed,
+unless there is a multisg admin that has greater privileges and can revoke permissions in case of a compromised or rogue EOA and reverse any adverse action the EOA has taken.
 </p>
 
 Privileged accounts can perform administrative tasks on the <a>Set of Contracts</a>.
@@ -3161,34 +3174,34 @@ For <a>Tested Code</a> that uses <code>tx.origin</code>, each instance</p>
   <a href="#req-1-no-tx.origin"><b>[S] No <code>tx.origin</code></b></a>.
 </p></div>
 
-  `tx.origin` can be used to enable phishing attacks, tricking a user into interacting
-  with a contract that gains access to all the funds in their account. It is generally
-  the wrong choice for authorization of a caller for which `msg.sender` is the safer choice.
+`tx.origin` can be used to enable phishing attacks, tricking a user into interacting
+with a contract that gains access to all the funds in their account. It is generally
+the wrong choice for authorization of a caller for which `msg.sender` is the safer choice.
 
-  See also <a>Related Requirements</a>
-  [**[Q] Document Contract Logic**](#req-3-documented),
-  <a href="#req-3-access-control"><b>[Q] Enforce Least Privilege</b></a>,
-  the [section "`tx.origin`"](https://docs.soliditylang.org/en/latest/security-considerations.html?highlight=tx.origin) in Solidity Security Considerations
-  [[solidity-security]], and CWE 284: Improper Access Control [[CWE-284]].
+See also <a>Related Requirements</a>
+[**[Q] Document Contract Logic**](#req-3-documented),
+<a href="#req-3-access-control"><b>[Q] Enforce Least Privilege</b></a>,
+the [section "`tx.origin`"](https://docs.soliditylang.org/en/latest/security-considerations.html?highlight=tx.origin) in Solidity Security Considerations
+[[solidity-security]], and CWE 284: Improper Access Control [[CWE-284]].
 
   <p id="req-3-consistent-solidity-output">
     <b>[Q] Specify Solidity Compiler Versions to Produce Consistent Output</b>
     <br>The <a>Tested Code</a> MUST specify a range of Solidity versions in its `pragma` directive(s)
     that produce the same Bytecode given the same compilation options.</p>
 
-  Different compiler versions can have different security vulnerabilities and introduce unexpected
-  behavior. While compiler upgrades <em>almost</em> always improve security characteristics,
-  there is no possible way to guarantee this is the case for any given change made in the future.
+Different compiler versions can have different security vulnerabilities and introduce unexpected
+behavior. While compiler upgrades <em>almost</em> always improve security characteristics,
+there is no possible way to guarantee this is the case for any given change made in the future.
 
-  For this reason, if the bytecode that is produced by compliling the <a>Tested Code</a> changes, this specification requires a new assessment
-  to achieve <a>EthTrust Certification</a> at <a>Security Level [Q]</a>.
+For this reason, if the bytecode that is produced by compliling the <a>Tested Code</a> changes, this specification requires a new assessment
+to achieve <a>EthTrust Certification</a> at <a>Security Level [Q]</a>.
 
-  Explicitly specifying an exact Solidity version ensures consistency between
-  development, auditing, and deployment by preventing compilation with other versions.
-  Specifying a range of Solidity Compiler Versions such that compiling the <a>Tested Code</a>
-  with any of the Soldity compiler versions within that range using the same settings produces the same Bytecode,
-  means that <a>Ethtrust Certification</a> of <a>Tested Code</a> is valid for as long as it is known there is no
-  change to the compiler that necessitates a new analysis.
+Explicitly specifying an exact Solidity version ensures consistency between
+development, auditing, and deployment by preventing compilation with other versions.
+Specifying a range of Solidity Compiler Versions such that compiling the <a>Tested Code</a>
+with any of the Soldity compiler versions within that range using the same settings produces the same Bytecode,
+means that <a>Ethtrust Certification</a> of <a>Tested Code</a> is valid for as long as it is known there is no
+change to the compiler that necessitates a new analysis.
 
 <aside class="note">
   The wording of this requirement allows for the specification of an open-ended range in `pragma` directives, such as
@@ -3205,8 +3218,8 @@ re-certification of the <a>Tested Code</a> for a newer Solidity compiler version
 
 </aside>
 
-  Note that even with a specific pragma directive, different compiler implementations claiming to be the same version,
-  optimization settings, and other build configuration parameters can all influence the Bytecode produced.
+Note that even with a specific pragma directive, different compiler implementations claiming to be the same version,
+optimization settings, and other build configuration parameters can all influence the Bytecode produced.
 </section>
 
 <section id="sec-good-practice-recommendations">
@@ -3304,7 +3317,7 @@ If the <a>Tested Code</a> does claim to follow a given ERC, its functional corre
 
 <p id="req-R-define-license">
   <b>[GP] Define a Software License</b><br>
-  The <a>Tested Code</a> SHOULD define a software license</p>
+The <a>Tested Code</a> SHOULD define a software license</p>
 
 A software license provides legal guidance on how contributors and users can interact with the code,
 including auditors and whitehats. Because bytecode deployed to public networks can be read by anyone,
@@ -3316,9 +3329,9 @@ e.g. using a prominent LICENSE file in the code repository and referencing it fr
 
 <p id="req-R-notify-news">
   <b>[GP] Disclose New Vulnerabilities Responsibly</b><br>
-  Security vulnerabilities that are not addressed by this specification
-  SHOULD be brought to the attention of the Working Group
-  and others through responsible disclosure as described in
+Security vulnerabilities that are not addressed by this specification
+SHOULD be brought to the attention of the Working Group
+and others through responsible disclosure as described in
   <a href="#sec-notifying-new-vulnerabilities"></a>.
 </p>
 
@@ -3341,8 +3354,8 @@ and helpful to prune unnecessary or duplicate inputs for efficiency.
 
 <aside class="example" title="Fuzzing specification with Scribble">
 
-  A simple example of a property written using <a href="https://docs.scribble.codes/tool/instrumented-code"><b>Scribble</b></a>, a specification language that turns annotations in Solidity into concrete assertions.
-  The annotation is the comment after "///". The property derived from that annotation that is being checked ensures that if the call to the contract `Foo` and function `add` succeeds, then the state variable `x` has to be equal to its value before the call - `old(x)` - added to the function parameter `y`. Essentially, fuzzing with this property would check whether or not the state's storage gets updated correctly.
+A simple example of a property written using <a href="https://docs.scribble.codes/tool/instrumented-code"><b>Scribble</b></a>, a specification language that turns annotations in Solidity into concrete assertions.
+The annotation is the comment after "///". The property derived from that annotation that is being checked ensures that if the call to the contract `Foo` and function `add` succeeds, then the state variable `x` has to be equal to its value before the call - `old(x)` - added to the function parameter `y`. Essentially, fuzzing with this property would check whether or not the state's storage gets updated correctly.
 
 <pre><code class="solidity">
   contract Foo {
@@ -3491,7 +3504,7 @@ This section provides a summary of all requirements in this Specification.
 
 <section id="sec-acknowledgments">
 
-<h3>Acknowledgments</h3>
+<h3>Acknowledgements</h3>
 
 The Community Group acknowledges and thanks the many people who contributed to the
 development of this version of the specification. Please advise us of any errors
@@ -3531,7 +3544,8 @@ the EEA publication (version 3):
 <section id="sec-change-new">
 <h4>New Requirements and Recommended Good Practices</h4>
 
-None so far.
+- <a href="#req-2-compiler-SOL-2025-1"><b>[M] Compiler Bug SOL-2025-1</b></a>
+
 
 </section>
 
@@ -3705,7 +3719,7 @@ function postProcess(){
 function reqSummary () {
   //
   // THIS COULD DO WITH A CLEANUP...
-  // 
+  //
   // Get all the requirements in the specification.
   var allReqs = document.querySelectorAll("[id^='req-']:not(.removed)");
   // Loop through each requirement.
@@ -3908,8 +3922,8 @@ var respecConfig = {
   otherLinks: [{
     key: "Checklist for this version",
     data: [{
-      value: "https://entethalliance.github.io/eta-registry/checklist.html",
-      href: "https://entethalliance.github.io/eta-registry/checklist.html"
+      value: "https://w3c-cg.github.io/EthTrust/checklist.html",
+      href: "https://w3c-cg.github.io/EthTrust/checklist.html"
     }]
   },
 {
@@ -3922,14 +3936,17 @@ var respecConfig = {
   {
     key: "Contributors to this version",
     data: [{
-      value: "As well as all those who contributed to the previous versions, that this version extends,\
-      the following people made specific contributions to this version of the specification:\
+      value: "The following people made specific contributions to this version of the specification:\
       Yevheniia Broshevan - Євгенія Брошеван (Hacken), \
       Matthias Egli (ChainSecurity), \
       Fly (FlyYouFools), \
       Ian Jacobs (W3C), \
       George Kobakhidze (Diligence), \
       Dominik Muhs"
+    },
+    {
+      value: "Further acknowledgements",
+      href: "#sec-acknowledgments"
     }]
   }],
   localBiblio: {

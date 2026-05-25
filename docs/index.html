@@ -1,13 +1,183 @@
 <!DOCTYPE html>
 <html><head>
 <title>EthTrust Community Group</title>
-  
+  <style>#contribs {columns: 5 25rem}</style>
 </head>
 <body>
   <h1>EthTrust Community Group - repository</h1>
 
   <p>Welcome to the GitHub repository of the <a href="">EthTrust Community Group</a>.</p>
 
-  
+<nav>
+  <ul>
+    <li><a href="#what">What is EthTrust?</a></li>
+    <li><a href="#whypri">Why not "critical", "moderate", etc?</a></li>
+    <li><a href="#how">How do we work?</a></li>
+    <li><a href="#history">Where did it come from?</a></li>
+    <li><a href="#who">Who has worked on it? Who works on it now?</a></li>
+    <li><a href="#get-involved">How can I help?</a></li>
+  </ul>
+</nav>
+
+<section id="what">
+  <h2>What is EthTrust?</h2>
+
+  <p>The <a href="https://w3c-cg.github.io/EthTrust/ethtrust-spec.html">EthTrust specification</a>
+    describes all known security vulnerabilities that can appear in Smart Contracts written in Solidity for the Ethereum blockchain.
+    It is designed from an auditor's perspective - what should you check for?</p>
+
+  <p>The current Editor's Draft follows the publication of version 3 in May 2025, and is expected to be the basis for a version 4, to be released "when it's ready".</p>
+
+</section>
+
+<section id="whypri">
+  <h2>Why not "critical", "moderate", etc?</h2>
+
+  <p>The EthTrust spec does not assign a priority for vulnerabilities. The primary reason is that this is very context-dependent:
+    What might be a critical problem in one project, because it is central to the entire operation, could be a minor concern in another,
+    because it is very hard to exploit and can only impact relatively unimportant information.</p>
+
+  <p>Instead EthTrust divides requirements roughly according to the kind of checking necessary to find them:</p>
+
+<dl>
+  <dt><a href="https://w3c-cg.github.io/EthTrust/ethtrust-spec.html#sec-levels-one">Level [S]</a></dt>
+  <dd>These are requirements that can be detected by "static analysis" - relatively simple software could test these reliably,
+    or a person can find them with only a basic level of solidity knowledge.</dd>
+  <dt><a href="https://w3c-cg.github.io/EthTrust/ethtrust-spec.html#sec-levels-two">Level [M]</a></dt>
+  <dd>These require some understanding of Ethereum and Solidity to interpret and correctly identify reliably.</dd>
+  <dt><a href="https://w3c-cg.github.io/EthTrust/ethtrust-spec.html#sec-levels-three">Level [Q]</a></dt>
+  <dd>A substantial amount of good judgement is necessary to identify and assess these requirements.
+    As well as basic vulnerabilities this level covers quality issues that can impact medium and long-term security.</dd>
+  <dt><a href="https://w3c-cg.github.io/EthTrust/ethtrust-spec.html#sec-good-practice-recommendations">Good Practices - "level" [GP]</a></dt>
+  <dd>This is what it claims. Good Practices, that if done right can improve security, sometimes significantly.
+    These are not sorted into the normal Levels structure because they are not strictly vulnerabilities,
+    but it is also important to understand that it is possible to do these badly,
+    and that doing these things badly can provide a false sense of security or even actively reduce the level of security.</dd>
+</dl>
+
+</section>
+
+<section id="how">
+  <h2>How do we work?</h2>
+
+  <p><i>WORK IN PROGRESS</i>. This is still being sorted, but based on years of experience there is a plan that continues the spirit of the last 5 years of development.</p>
+
+  <p>The specification draft is in this GitHub repository, and the base working model is:</p>
+
+  <dl>
+    <dt>Raise and discuss issues</dt>
+    <dd>Describe something that needs to be addressed - a vulnerability the spec doesn't identify, an explanation that is insufficient or doesn't make sense,
+      something that would make it easier to understand or implement...</dd>
+    <dd>The optimal way to do this is through the <a href="https://github.com/w3c-cg/EthTrust/issues">Issues in this repository</a>.</dd>
+    <dt>Propose a solution</dt>
+    <dd>Typically, this means a change to the specification, or some associated documentation.</dd>
+    <dd>The ideal way to do this is a <a href="https://github.com/w3c-cg/EthTrust/pulls">Pull Request</a>, but it can also be done in the issue discussion,
+      or however else you can communicate it to the group.</dd>
+    <dt>Agree on a solution</dt>
+    <dd>The group tries to reach "lazy rough" consensus. This means that there are no strong objections,
+      and there is real support, at least far more than for alternatives proposed.</dd>
+    <dd>The mechanics of decision-making include discussion at meetings as well as in the repository.
+      Ultimately, it depends on the chair accurately guaging the consensus of the participants.</dd>
+</dl>
+
+</section>
+
+<section id="history">
+  <h2>Where did it come from</h2>
+
+  <p>The EthTrust project began as an effort to show that Smart contracts had been audited, a goal similar to <a href="https://eips.ethereum.org/EIPS/eip-7512">ERC-7512</a>.
+    (There is a website at ethtrust.org that appears to be a link to assorted gambling sites, but maintains some of the 2019 content).
+    Although code was written, the project did not take off, and was eventually handed to EEA to see if they could lead it to success.</p>
+
+  <p>The EEA pivoted from the need to identify audited contracts to the need for a basic auditing standard. Thus the EthTrust specification was developed,
+  covering code written in Solidity - the vast majority of Smart Contracts on the Ethereum blockchain.</p>
+
+  <p>The project developed the work of the Smart Contract Registry (long outdated but available at swcregistry.io).
+  As the EEA spec began taking shape in 2020 that project stopped being maintained by its developers.
+  Everything in SWC was eventually covered by EthTrust, as were the entire collection of Solidity Compiler bugs,
+  otherwise most easily found in a Javascript file and series of blog posts maintained by the developers of the Solidity compiler.
+  Over time, various other sources of vulnerabilities were scoured, along with the experience of a broad range of expert contributors.</p>
+
+  <p>The EEA had stopped maintaining the specification by the release of version 3, in May 2025.
+    Beginning in April 2026, the <a href="https://www.w3.org/community/ethtrust/">EthTrust Community Group</a> was created to maintain the specification
+    through an open public process.</p>
+
+</section>
+
+<section id="who">
+  <h2>Who has worked on it?</h2>
+
+  <p>The published versions of the specification each attempt to thank all the individuals who contributed to that specific version:</p>
+
+  <ul>
+    <li><a href="https://entethalliance.org/specs/ethtrust-sl-v1">Acknowledgements in version 1</a></li>
+    <li><a href="https://entethalliance.org/specs/ethtrust-sl-v2">Acknowledgements in version 2</a></li>
+    <li><a href="https://entethalliance.org/specs/ethtrust-sl-v3">Acknowledgements in version 3</a></li>
+    <li><a href="https://w3c-cg.github.io/EthTrust/ethtrust-spec.html#sec-acknowledgments">Acknowledgements in the current Editor's Draft</a></li>
+  </ul>
+
+  <p>Among the companies and organisations that have participated in or actively supported the work are:</p>
+
+  <ul id="contribs">
+    <li>Abbaccio</li>
+    <li>Banco Santander</li>
+    <li>DTCC</li>
+    <li>CertiK</li>
+    <li>ChainSecurity</li>
+    <li>Coinspect</li>
+    <li>Consensys Software Inc.</li>
+    <li>Consensys Diligence</li>
+    <li>Creed</li>
+    <li>Cube3.ai</li>
+    <li>Enterprise Ethereum Alliance</li>
+    <li>EY</li>
+    <li>Fly You Fools</li>
+    <li>Hacken</li>
+    <li>JP Morgan</li>
+    <li>Kauz Security Services GmbH</li>
+    <li>LACChain</li>
+    <li>Max Planck Institute for Security and Privacy</li>
+    <li>Microsoft</li>
+    <li>NVISO</li>
+    <li>Olympix.ai</li>
+    <li>OpenZeppelin</li>
+    <li>Quantstamp</li>
+    <li>Runtime Verification</li>
+    <li>SAE</li>
+    <li>SigmaPrime</li>
+    <li>Splunk</li>
+    <li>Trail of Bits</li>
+    <li>TMIO</li>
+  </ul>
+
+  <p>Please note that having participated or supported in the past does not necessarily imply an organization's support
+    for the current project or state of the specification.</p>
+
+</section>
+
+<section id="get-involved">
+  <h2>How can I help?</h2>
+
+  <p>The <a href="https://www.w3.org/community/ethtrust/">EthTrust Community Group</a> is set up as a <a href="https://www.w3.org/community/">W3C Community Group</a>.
+    Anyone can join, by getting a W3C Account (free, but you have to agree to the conditions).
+
+  <p>There are many ways to help:</p>
+
+  <ul>
+    <li><b>Review</b> the specification, make comments ("looks good to me" is helpful feedback, just as raising an issue is).</li>
+    <li><b>Implementing</b> requirements in tools or workflows helps understand whether they are appropriately designed and explained.
+      We will attempt to list known implementation, and particularly welcome feedback on what made it easy or difficult, that we can use to improve the specification.</li>
+    <li><b>Developing Tests</b> that others can use to check their implementations, understand the specification, or benchmark their evaluation of specific points,
+      can all help improve how consistently different people apply the specification. We will attempt to list known tests and examples,
+      whether they are primarily developed for machines or for people.</li>
+    <li><b>Explaining, Translating, Mentioning</b> the specification in contexts where the group has little presence is generally helpful.</li>
+  </ul>
+
+  <p>Whether you are directly working on the specification, helping other people to do so, doing security work that the specification builds on,
+    choosing to be a customer of an organization because it supports or participates in this work,
+    or sharing it within your organization or work, we appreciate all the known and unknown contributions to the security ecosystem we are part of.</p>
+
+</section>
+
 </body>
 </html>
